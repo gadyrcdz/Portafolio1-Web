@@ -1,0 +1,87 @@
+    {
+  "posts": [
+    {
+      "id": 1,
+      "title": "Mi Journey como Contribuidor en OnlyDust: Aprendizajes y Desafíos",
+      "slug": "contribuyendo-onlydust-blockchain",
+      "excerpt": "Cómo comencé a contribuir en proyectos de código abierto en el ecosistema blockchain y las lecciones aprendidas en el camino...",
+      "content": "Cuando descubrí OnlyDust, no imaginaba que se convertiría en una parte fundamental de mi desarrollo como programador. Esta plataforma me ha permitido contribuir a proyectos blockchain reales mientras aprendo de desarrolladores de todo el mundo.\n\n## ¿Qué es OnlyDust?\n\nOnlyDust es una plataforma que conecta desarrolladores con proyectos de código abierto en el ecosistema blockchain, especialmente en Starknet y Stellar. A diferencia de otras plataformas, OnlyDust se enfoca en recompensar contribuciones de calidad.\n\n## Mis Primeras Contribuciones\n\nMi primera Pull Request fue intimidante. Estaba trabajando en un proyecto de Starknet, mejorando la documentación de un contrato inteligente. Aunque parezca simple, aprendí mucho sobre:\n\n- Estándares de documentación en blockchain\n- Revisión de código en equipos distribuidos\n- Comunicación asíncrona con desarrolladores internacionales\n\n## Trabajando con Starknet\n\nStarknet ha sido una revelación. Como capa 2 de Ethereum usando tecnología ZK-rollup, ofrece escalabilidad manteniendo la seguridad. He contribuido en:\n\n- Optimización de contratos en Cairo\n- Testing de funcionalidades complejas\n- Mejoras en la experiencia de usuario de dApps\n\n## Lecciones Aprendidas\n\n1. **La calidad sobre la cantidad**: Es mejor hacer una PR bien pensada que muchas mediocres\n2. **Comunicación clara**: En equipos remotos, ser explícito es esencial\n3. **Aprender en público**: No temer hacer preguntas y compartir dudas\n4. **Entender el contexto**: Antes de contribuir, comprender la visión del proyecto\n\n## Próximos Pasos\n\nContinuaré contribuyendo activamente, especialmente en proyectos que impacten el ecosistema DeFi en Latinoamérica. Mi meta es ayudar a hacer la tecnología blockchain más accesible en nuestra región.",
+      "date": "2025-02-15",
+      "readTime": "8 min",
+      "tags": ["OnlyDust", "Blockchain", "Open Source", "Starknet", "Aprendizaje"],
+      "published": true,
+      "author": "Gadir Calderón",
+      "coverImage": "/images/blog/onlydust-journey.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Starknet vs Stellar: Dos Ecosistemas, Diferentes Propósitos",
+      "slug": "comparando-starknet-stellar",
+      "excerpt": "Una comparación técnica entre dos ecosistemas blockchain en los que trabajo activamente...",
+      "content": "Como desarrollador que trabaja tanto en Starknet como en Stellar, frecuentemente me preguntan sobre las diferencias entre estos dos ecosistemas. Ambos son fascinantes, pero sirven propósitos muy diferentes.\n\n## Starknet: Escalabilidad para Ethereum\n\n### ¿Qué es Starknet?\nStarknet es una Layer 2 (L2) de Ethereum que usa ZK-STARKs para lograr escalabilidad. Su lenguaje nativo, Cairo, permite escribir contratos verificables.\n\n### Casos de Uso\n- DeFi complejo con bajas comisiones\n- Gaming blockchain\n- NFTs a escala\n- Aplicaciones que requieren alta throughput\n\n### Mi Experiencia\nTrabajar con Cairo ha sido un reto interesante. La curva de aprendizaje es empinada, pero la capacidad de crear contratos eficientes y seguros vale la pena.\n\n## Stellar: Pagos y Activos Digitales\n\n### ¿Qué es Stellar?\nStellar es una blockchain diseñada específicamente para pagos y emisión de activos digitales. Su enfoque está en transacciones rápidas y económicas.\n\n### Casos de Uso\n- Remesas internacionales\n- Tokenización de activos\n- Pagos peer-to-peer\n- Stablecoins y CBDCs\n\n### Mi Experiencia\nEl SDK de Stellar es intuitivo y bien documentado. He trabajado en soluciones de pagos que procesan transacciones en segundos con costos mínimos.\n\n## Comparación Técnica\n\n| Característica | Starknet | Stellar |\n|----------------|----------|----------|\n| **Tiempo de transacción** | ~10-30 min (settlement) | 3-5 segundos |\n| **Costo** | Variable, más bajo que L1 | ~$0.00001 |\n| **Lenguaje** | Cairo | No requiere (usa SDKs) |\n| **Casos de uso principales** | DeFi, Gaming, NFTs | Pagos, Remesas, Activos |\n| **Complejidad de desarrollo** | Alta | Media-Baja |\n\n## ¿Cuál Elegir?\n\nNo es cuestión de cuál es mejor, sino cuál se ajusta a tu caso de uso:\n\n- **Elige Starknet si**: Necesitas contratos inteligentes complejos con bajos costos\n- **Elige Stellar si**: Tu enfoque son pagos rápidos y emisión de activos\n\n## Conclusión\n\nAmbos ecosistemas tienen su lugar en el futuro de blockchain. Mi recomendación es experimentar con ambos y entender sus fortalezas únicas.",
+      "date": "2025-02-08",
+      "readTime": "10 min",
+      "tags": ["Starknet", "Stellar", "Blockchain", "Comparación", "Tecnología"],
+      "published": true,
+      "author": "Gadir Calderón",
+      "coverImage": "/images/blog/starknet-vs-stellar.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Desarrollando mi Primer dApp: Del Concepto a la Producción",
+      "slug": "mi-primer-dapp-experiencia",
+      "excerpt": "La experiencia completa de crear una aplicación descentralizada desde cero, incluyendo todos los errores y aprendizajes...",
+      "content": "Crear tu primera dApp (aplicación descentralizada) es una experiencia transformadora. Aquí comparto mi journey completo, desde la idea inicial hasta el deployment.\n\n## La Idea Inicial\n\nQuería crear algo útil para la comunidad estudiantil del TEC: un sistema de verificación de certificados usando blockchain. La idea era simple pero poderosa.\n\n## Stack Tecnológico Seleccionado\n\n### Frontend\n- **React**: Para la interfaz de usuario\n- **Web3.js**: Para interactuar con la blockchain\n- **Tailwind CSS**: Para estilos modernos\n\n### Backend & Blockchain\n- **Starknet**: Para los contratos inteligentes\n- **Cairo**: Lenguaje de contratos\n- **IPFS**: Para almacenar metadata\n\n## Desarrollo del Smart Contract\n\n```cairo\n// Ejemplo simplificado del contrato\n@contract_interface\nnamespace ICertificateRegistry {\n    func register_certificate(\n        student_id: felt,\n        certificate_hash: felt,\n        timestamp: felt\n    ) {\n    }\n    \n    func verify_certificate(\n        certificate_hash: felt\n    ) -> (is_valid: felt) {\n    }\n}\n```\n\n## Desafíos Encontrados\n\n### 1. Gestión de Gas\nInicialmente, no optimicé bien los contratos y los costos eran prohibitivos. Aprendí a:\n- Minimizar storage writes\n- Usar eventos eficientemente\n- Batch operations cuando es posible\n\n### 2. User Experience\nLa experiencia con wallets puede ser confusa para nuevos usuarios. Implementé:\n- Onboarding paso a paso\n- Mensajes claros de error\n- Loading states informativos\n\n### 3. Testing\nTesting en blockchain requiere un approach diferente:\n- Unit tests para lógica de negocio\n- Integration tests con testnet\n- Manual testing exhaustivo\n\n## Lecciones Aprendidas\n\n### Técnicas\n1. **Siempre testea en testnet primero**: Los errores en mainnet son costosos\n2. **Documenta todo**: Tu yo del futuro te lo agradecerá\n3. **Security first**: Audita tu código múltiples veces\n\n### De Proceso\n1. **Itera rápido**: MVP primero, features después\n2. **Escucha feedback**: Los usuarios encuentran bugs que tú no viste\n3. **Planea para escalabilidad**: Aunque empieces pequeño\n\n## Herramientas Útiles\n\n- **Hardhat/Protostar**: Para desarrollo local\n- **OpenZeppelin**: Contratos seguros y testeados\n- **Tenderly**: Para debugging\n- **The Graph**: Para indexación de datos\n\n## Próximos Pasos\n\nEl proyecto continúa evolucionando. Planes futuros incluyen:\n- Integración con más universidades\n- Mobile app\n- Soporte multi-chain\n- DAO para gobernanza\n\n## Consejos para tu Primera dApp\n\n1. **Empieza simple**: No intentes construir el próximo DeFi protocol en tu primer proyecto\n2. **Únete a comunidades**: Discord, Telegram, foros - el apoyo es invaluable\n3. **Lee código de otros**: Los repos open source son escuelas gratis\n4. **No te rindas**: Los errores son parte del proceso\n\n## Conclusión\n\nDesarrollar una dApp es desafiante pero increíblemente gratificante. Cada obstáculo superado te hace mejor desarrollador. Si estás pensando en empezar, mi consejo es: hazlo. La mejor forma de aprender blockchain es construyendo.\n\n¿Tienes preguntas sobre el desarrollo de dApps? Contáctame en GitHub o LinkedIn!",
+      "date": "2025-01-28",
+      "readTime": "12 min",
+      "tags": ["dApp", "Desarrollo", "Starknet", "Smart Contracts", "Tutorial"],
+      "published": true,
+      "author": "Gadir Calderón",
+      "coverImage": "/images/blog/primer-dapp.jpg"
+    },
+    {
+      "id": 4,
+      "title": "React Hooks Avanzados: Optimizando Aplicaciones Web3",
+      "slug": "react-hooks-web3-optimization",
+      "excerpt": "Técnicas avanzadas de React Hooks para mejorar el rendimiento en aplicaciones blockchain...",
+      "content": "Las aplicaciones Web3 tienen desafíos únicos de rendimiento. Los hooks de React, cuando se usan correctamente, pueden hacer la diferencia entre una app lenta y una experiencia fluida.\n\n## El Problema del Re-rendering en Web3\n\nLas apps Web3 frecuentemente necesitan:\n- Actualizar balances en tiempo real\n- Escuchar eventos de contratos\n- Mantener conexiones con wallets\n- Actualizar múltiples estados relacionados\n\nEsto puede causar re-renders excesivos y degradar la UX.\n\n## useMemo para Cálculos Costosos\n\n```javascript\nconst formattedBalance = useMemo(() => {\n  return Web3.utils.fromWei(balance, 'ether');\n}, [balance]);\n```\n\n## useCallback para Event Handlers\n\n```javascript\nconst handleTransaction = useCallback(async () => {\n  await contract.methods.transfer(to, amount).send();\n}, [contract, to, amount]);\n```\n\n## Custom Hook: useContract\n\n```javascript\nfunction useContract(address, abi) {\n  const { library } = useWeb3React();\n  \n  return useMemo(() => {\n    if (!library || !address) return null;\n    return new library.eth.Contract(abi, address);\n  }, [library, address, abi]);\n}\n```\n\n## Optimización de Suscripciones\n\nPara eventos de contratos:\n\n```javascript\nuseEffect(() => {\n  if (!contract) return;\n  \n  const subscription = contract.events.Transfer()\n    .on('data', handleTransfer)\n    .on('error', console.error);\n  \n  return () => subscription.unsubscribe();\n}, [contract]);\n```\n\n## Resultados\n\nEstas optimizaciones redujeron:\n- Re-renders en 60%\n- Tiempo de carga inicial en 40%\n- Uso de memoria en 30%\n\n## Conclusión\n\nLa optimización es crucial en Web3. React Hooks bien implementados pueden transformar la experiencia de usuario.",
+      "date": "2025-01-20",
+      "readTime": "6 min",
+      "tags": ["React", "Web3", "Optimización", "Hooks", "Performance"],
+      "published": true,
+      "author": "Gadir Calderón",
+      "coverImage": "/images/blog/react-hooks.jpg"
+    },
+    {
+      "id": 5,
+      "title": "El Futuro de Blockchain en Costa Rica: Oportunidades y Desafíos",
+      "slug": "blockchain-costa-rica-futuro",
+      "excerpt": "Análisis del ecosistema blockchain en Costa Rica y las oportunidades para desarrolladores locales...",
+      "content": "Costa Rica tiene un potencial enorme en el ecosistema blockchain. Como desarrollador local, veo oportunidades increíbles pero también desafíos importantes.\n\n## Estado Actual\n\n### Adopción Empresarial\n- Varias startups explorando blockchain\n- Bancos experimentando con DLT\n- Gobierno evaluando aplicaciones\n\n### Comunidad de Desarrolladores\n- Creciente pero aún pequeña\n- Eventos y meetups esporádicos\n- Necesidad de más educación formal\n\n## Oportunidades Clave\n\n### 1. Remesas\nCosta Rica recibe millones en remesas. Blockchain puede:\n- Reducir costos de 8% a menos de 1%\n- Transferencias en minutos vs días\n- Mayor transparencia\n\n### 2. Trazabilidad Agrícola\nCon café y otros exports:\n- Certificación de origen\n- Sostenibilidad verificable\n- Acceso a mercados premium\n\n### 3. Gobierno Digital\n- Identidad digital\n- Registros públicos\n- Transparencia en contratos\n\n## Desafíos\n\n### Regulación\n- Marco legal poco claro\n- Necesidad de regulación inteligente\n- Balance entre innovación y protección\n\n### Educación\n- Falta de programas universitarios\n- Necesidad de certificaciones\n- Escasez de talento especializado\n\n### Infraestructura\n- Internet aún limitado en zonas rurales\n- Costos de tecnología\n- Acceso a capital para startups\n\n## Mi Visión\n\nVeo a Costa Rica como un hub blockchain para Centroamérica. Tenemos:\n- Estabilidad política\n- Alto nivel educativo\n- Cultura de innovación\n- Infraestructura tecnológica base\n\n## Acciones Necesarias\n\n### Para Desarrolladores\n1. Aprender y especializarse\n2. Contribuir a proyectos open source\n3. Crear comunidad local\n4. Educar sobre blockchain\n\n### Para Empresas\n1. Explorar casos de uso\n2. Invertir en talento local\n3. Colaborar con universidades\n4. Pilotos antes de producción\n\n### Para Gobierno\n1. Crear sandbox regulatorio\n2. Incentivar innovación\n3. Educación en tecnologías emergentes\n4. Atraer inversión extranjera\n\n## Iniciativas Personales\n\nEstoy trabajando en:\n- Grupos de estudio en el TEC\n- Talleres gratuitos online\n- Traducción de documentación al español\n- Proyectos que resuelvan problemas locales\n\n## Conclusión\n\nEl futuro de blockchain en Costa Rica es prometedor. Depende de nosotros, los desarrolladores, empresarios y reguladores, trabajar juntos para realizarlo.\n\n¿Quieres colaborar en proyectos blockchain en CR? ¡Conectemos!",
+      "date": "2025-01-15",
+      "readTime": "9 min",
+      "tags": ["Costa Rica", "Blockchain", "Innovación", "Futuro", "Oportunidades"],
+      "published": true,
+      "author": "Gadir Calderón",
+      "coverImage": "/images/blog/blockchain-cr.jpg"
+    }
+  ],
+  "categories": [
+    "Blockchain",
+    "Desarrollo Web",
+    "Open Source",
+    "Tutorial",
+    "Opinión",
+    "Tecnología",
+    "Costa Rica"
+  ],
+  "tags": [
+    "Starknet",
+    "Stellar",
+    "OnlyDust",
+    "React",
+    "Web3",
+    "Optimización",
+    "Aprendizaje"
+  ]
+}

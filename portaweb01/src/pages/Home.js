@@ -1,6 +1,7 @@
+// src/pages/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, ArrowRight } from 'lucide-react';
 import personalData from '../data/personal-info.json';
 import './Home.css';
 
@@ -54,7 +55,7 @@ const Home = () => {
                 className="social-link"
                 aria-label="Email"
               >
-                <Mail size={24} />
+                📧
               </a>
             </div>
           </div>

@@ -1,50 +1,184 @@
 {
   "basicInfo": {
-    "name": "Gadyr Calderón Díaz",
-    "title": "Estudiante de Ingeniería en Computación",
-    "email": "gadcalderon@estudiantec.cr",
-    "phone": "+506 8599-4094",
-    "location": "Costa Rica",
+    "name": "Gadir Calderón Díaz",
+    "title": "Desarrollador Full Stack | Blockchain Developer | Estudiante de Ingeniería en Computación",
+    "email": "gadyrcalde@gmail.com",
+    "phone": "+506 8599 4094",
+    "location": "Limón, Costa Rica",
     "photo": "/images/photo.jpeg",
-    "bio": "Estudiante apasionado por el desarrollo web y la tecnología, cursando Ingeniería en Computación en el TEC."
+    "bio": "Desarrollador de software con enfoque en tecnologías web y blockchain. Estudiante de último año de Ingeniería en Computación en el Tecnológico de Costa Rica. Contribuidor activo en proyectos de código abierto a través de OnlyDust, con experiencia tanto en desarrollo Frontend como Backend. Especializado en ecosistemas blockchain como Starknet y Stellar. Apasionado por la innovación tecnológica y la programación colaborativa."
   },
   "jsonLD": {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Gadyr Calderón Díaz",
-    "jobTitle": "Estudiante de Ingeniería en Computación",
-    "email": "gadcalderon@estudiantec.cr",
+    "name": "Gadir Calderón Díaz",
+    "jobTitle": "Full Stack Developer & Blockchain Developer",
+    "email": "gadyrcalde@gmail.com",
+    "telephone": "+506 8599 4094",
     "image": "/images/photo.jpeg",
     "url": "https://gadyrcdz.github.io/portfolio-ic8057",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Tecnológico de Costa Rica"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Limón",
+      "addressCountry": "Costa Rica"
+    },
     "sameAs": [
+      "https://github.com/gadyrcdz",
       "https://linkedin.com/in/gadyrcdz",
-      "https://github.com/gadyrcdz"
+      "https://app.onlydust.com/u/gadyrcdz"
+    ],
+    "knowsAbout": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Blockchain",
+      "Starknet",
+      "Stellar",
+      "Web3",
+      "Smart Contracts"
     ]
   },
   "skills": {
     "programming": [
-      { "name": "JavaScript", "level": 75 },
-      { "name": "HTML/CSS", "level": 85 },
-      { "name": "React", "level": 60 },
-      { "name": "Python", "level": 70 }
+      { "name": "JavaScript", "level": 90 },
+      { "name": "TypeScript", "level": 85 },
+      { "name": "Python", "level": 80 },
+      { "name": "C/C++", "level": 75 },
+      { "name": "Java", "level": 70 },
+      { "name": "Solidity", "level": 75 }
+    ],
+    "frontend": [
+      { "name": "React", "level": 90 },
+      { "name": "Vue.js", "level": 85 },
+      { "name": "HTML5/CSS3", "level": 95 },
+      { "name": "SASS", "level": 80 }
+    ],
+    "backend": [
+      { "name": "Node.js", "level": 85 },
+      { "name": "Express", "level": 80 },
+      { "name": "Django", "level": 75 },
+      { "name": "API RESTful", "level": 85 }
+    ],
+    "blockchain": [
+      { "name": "Starknet", "level": 80 },
+      { "name": "Stellar", "level": 80 },
+      { "name": "Web3.js", "level": 85 },
+      { "name": "Ethers.js", "level": 85 }
+    ],
+    "databases": [
+      { "name": "MongoDB", "level": 80 },
+      { "name": "PostgreSQL", "level": 75 },
+      { "name": "MySQL", "level": 70 }
     ],
     "tools": [
-      { "name": "Git", "level": 80 },
-      { "name": "VSCode", "level": 90 },
-      { "name": "Figma", "level": 65 }
+      { "name": "Git", "level": 90 },
+      { "name": "Docker", "level": 75 },
+      { "name": "Webpack", "level": 70 },
+      { "name": "Jest", "level": 75 },
+      { "name": "GitHub Actions", "level": 80 }
     ]
   },
+  "experience": [
+    {
+      "position": "Desarrollador Frontend y Backend",
+      "company": "OnlyDust - Proyectos Blockchain",
+      "period": "2024 - Presente",
+      "description": "Contribuidor activo en proyectos de código abierto dentro del ecosistema blockchain",
+      "achievements": [
+        "Desarrollo de interfaces de usuario y componentes frontend utilizando JavaScript, TypeScript y frameworks modernos",
+        "Implementación de funcionalidades backend relacionadas con la integración de tecnologías blockchain",
+        "Colaboración en equipos distribuidos con desarrolladores de todo el mundo mediante metodologías ágiles",
+        "Resolución de issues y mejora continua de código existente en múltiples repositorios"
+      ],
+      "technologies": ["JavaScript", "TypeScript", "React", "Node.js", "Starknet", "Stellar"]
+    },
+    {
+      "position": "Desarrollador de Soluciones Blockchain",
+      "company": "Proyectos Independientes",
+      "period": "2024 - Presente",
+      "description": "Desarrollo de aplicaciones descentralizadas (dApps)",
+      "achievements": [
+        "Desarrollo de aplicaciones descentralizadas (dApps) utilizando tecnologías blockchain",
+        "Implementación de contratos inteligentes y lógica de aplicación en cadenas como Starknet y Stellar",
+        "Creación de interfaces de usuario para facilitar la interacción con tecnologías blockchain"
+      ],
+      "technologies": ["Solidity", "Web3.js", "Ethers.js", "React", "Starknet", "Stellar"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ingeniería en Computación",
+      "institution": "Tecnológico de Costa Rica",
+      "location": "Limón, Costa Rica",
+      "period": "2022 - 2026 (esperado)",
+      "highlights": [
+        "Especialización en desarrollo de software y tecnologías web",
+        "Proyectos académicos enfocados en soluciones innovadoras",
+        "Participación en grupos de investigación tecnológica"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "proficiency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "proficiency": "Avanzado (B2)"
+    }
+  ],
   "links": {
     "github": "https://github.com/gadyrcdz",
     "linkedin": "https://linkedin.com/in/gadyrcdz",
-    "email": "mailto:gadcalderon@estudiantec.cr"
+    "onlydust": "https://app.onlydust.com/u/gadyrcdz",
+    "email": "mailto:gadyrcalde@gmail.com"
   },
   "certifications": [
     {
-      "name": "Certificación de Ejemplo",
-      "issuer": "Plataforma Online",
+      "name": "Desarrollo de Aplicaciones Blockchain",
+      "issuer": "Plataforma educativa online",
       "date": "2024",
-      "link": "https://enlace-certificacion.com"
+      "link": null
+    },
+    {
+      "name": "Desarrollo Web Full Stack",
+      "issuer": "Plataforma educativa online",
+      "date": "2024",
+      "link": null
     }
+  ],
+  "projects": [
+    {
+      "name": "Contribuciones en Starknet",
+      "description": "Desarrollo de componentes y mejoras para proyectos en el ecosistema Starknet, enfocado en la escalabilidad y seguridad de aplicaciones descentralizadas",
+      "technologies": ["Starknet", "TypeScript", "Cairo"],
+      "type": "Open Source"
+    },
+    {
+      "name": "Contribuciones en Stellar",
+      "description": "Participación en la mejora de herramientas y bibliotecas para el ecosistema Stellar, desarrollando soluciones para pagos digitales, tokenización de activos y sistemas de gestión financiera descentralizada",
+      "technologies": ["Stellar", "JavaScript", "Web3"],
+      "type": "Open Source"
+    }
+  ],
+  "interests": [
+    "Tecnologías Blockchain",
+    "Desarrollo de dApps",
+    "Código Abierto",
+    "Web3",
+    "Smart Contracts",
+    "Innovación Tecnológica",
+    "Programación Colaborativa"
+  ],
+  "professionalGoals": [
+    "Contribuir al desarrollo del ecosistema blockchain en Costa Rica",
+    "Desarrollar soluciones innovadoras en Web3",
+    "Especializarme en arquitecturas descentralizadas",
+    "Participar en proyectos de impacto global"
   ]
 }

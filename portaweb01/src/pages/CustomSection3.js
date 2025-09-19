@@ -1,7 +1,8 @@
 // src/pages/CustomSection3.js (Hobbies e Intereses)
 import React, { useState } from 'react';
-import { Camera, Music, Book, Gamepad2, Mountain, Code, Heart } from 'lucide-react';
+import { Gamepad2, Mountain, Code, Heart   } from 'lucide-react';
 import './CustomSection3.css';
+
 
 const CustomSection3 = () => {
   const [selectedHobby, setSelectedHobby] = useState(null);
@@ -9,15 +10,10 @@ const CustomSection3 = () => {
   const hobbies = [
     {
       id: 1,
-      title: "Fotografía",
-      icon: <Camera size={32} />,
+      title: "Futbol",
+      icon: <soccerBall  size={32} />,
       description: "Capturando momentos y paisajes de Costa Rica",
       longDescription: "La fotografía me permite explorar la belleza natural de Costa Rica mientras desarrollo mi ojo artístico. Me especializo en fotografía de paisajes y arquitectura.",
-      gallery: [
-        "/images/photo1.jpg",
-        "/images/photo2.jpg",
-        "/images/photo3.jpg"
-      ],
       skills: ["Composición", "Edición digital", "Fotografía nocturna"],
       equipment: ["Canon EOS 250D", "Lente 18-55mm", "Adobe Lightroom"],
       achievements: [
@@ -28,78 +24,38 @@ const CustomSection3 = () => {
     },
     {
       id: 2,
-      title: "Música",
-      icon: <Music size={32} />,
-      description: "Guitarra acústica y producción musical digital",
-      longDescription: "Toco guitarra desde hace 5 años y recientemente me he interesado en la producción musical digital, combinando mi pasión por la música con la tecnología.",
-      gallery: [],
-      skills: ["Guitarra acústica", "Producción en DAW", "Teoría musical"],
-      equipment: ["Guitarra Yamaha F310", "Audio interface", "FL Studio"],
-      achievements: [
-        "3 años de clases formales de guitarra",
-        "Produje 2 covers instrumentales",
-        "Participé en noches de talentos del TEC"
-      ]
-    },
-    {
-      id: 3,
-      title: "Lectura",
-      icon: <Book size={32} />,
-      description: "Ciencia ficción, tecnología y desarrollo personal",
-      longDescription: "Soy un ávido lector, especialmente de ciencia ficción y libros sobre tecnología. También disfruto libros de desarrollo personal y biografías de personas influyentes en tech.",
-      gallery: [],
-      skills: ["Análisis crítico", "Velocidad de lectura", "Síntesis de información"],
-      equipment: ["Kindle Paperwhite", "Biblioteca personal", "Audible"],
-      achievements: [
-        "40+ libros leídos en 2023",
-        "Reseñas en Goodreads",
-        "Club de lectura TEC member"
-      ],
-      currentlyReading: [
-        "Clean Code - Robert C. Martin",
-        "Dune - Frank Herbert",
-        "The Pragmatic Programmer - David Thomas"
-      ],
-      favoriteBooks: [
-        "The Martian - Andy Weir",
-        "Steve Jobs - Walter Isaacson", 
-        "Atomic Habits - James Clear"
-      ]
-    },
-    {
-      id: 4,
       title: "Gaming",
       icon: <Gamepad2 size={32} />,
-      description: "Estrategia, puzzles y desarrollo de juegos indie",
-      longDescription: "Los videojuegos han sido una pasión desde la infancia. Me interesan especialmente los juegos de estrategia y puzzles, y estoy explorando el desarrollo de juegos como hobby.",
+      description: "Juegos de shooter, FIFA, GTA",
+      longDescription: "Los videojuegos han sido una pasión desde la infancia. Me interesan especialmente los juegos de estrategia, y estoy explorando el desarrollo de juegos como hobby.",
       gallery: [],
       skills: ["Pensamiento estratégico", "Resolución de problemas", "Game design basics"],
-      equipment: ["PC Gaming", "Nintendo Switch", "Steam Deck"],
+      equipment: ["PC Gaming", "Play Station", "PSP"],
       achievements: [
         "Rank Diamond en varios juegos competitivos",
         "Prototipo de juego en desarrollo",
         "Comunidad local de gaming"
       ],
       favoriteGames: [
-        "Civilization VI",
-        "Portal series",
-        "The Legend of Zelda",
-        "Factorio"
+        "Call of Duty",
+        "FIFA",
+        "Rainbow Six",
+        "Counter-Strike"
       ]
     },
     {
-      id: 5,
+      id: 3,
       title: "Senderismo",
       icon: <Mountain size={32} />,
       description: "Explorando montañas y volcanes de Costa Rica",
-      longDescription: "Costa Rica ofrece increíbles oportunidades para el senderismo. He explorado varios volcanes y montañas, combinando ejercicio con fotografía de naturaleza.",
+      longDescription: "Trabajo en la empresa familiar como guía turistico, haciendo tanto tours de senderos como de canopy. He explorado varios volcanes y montañas, tanto en Costa Rica como en otros países.",
       gallery: [],
       skills: ["Orientación", "Preparación física", "Supervivencia básica"],
-      equipment: ["Botas de montaña", "Mochila 40L", "GPS Garmin"],
+      equipment: ["Zapatos de montaña", "Bolso", "Agua"],
       achievements: [
-        "Ascenso al Chirripó (2 veces)",
-        "Volcán Poás, Irazú, Arenal visitados",
-        "15+ rutas completadas"
+        "Ascenso al Chirripó ",
+        "Volcán Poás, Cerro negro, Arenal visitados",
+        "5 rutas completadas"
       ],
       plannedTrips: [
         "Caminata nocturna Monteverde",
@@ -108,16 +64,15 @@ const CustomSection3 = () => {
       ]
     },
     {
-      id: 6,
+      id: 4,
       title: "Programación Recreativa",
       icon: <Code size={32} />,
       description: "Coding challenges, algoritmos y proyectos experimentales",
-      longDescription: "Más allá de las tareas académicas, disfruto resolviendo problemas de programación, participando en coding challenges y experimentando con nuevas tecnologías.",
+      longDescription: "Más allá de las tareas académicas, me gusta hacer ejercicios de programación y hackatons participando en coding challenges y experimentando con nuevas tecnologías.",
       gallery: [],
       skills: ["Problem solving", "Algoritmos", "Multiple languages"],
       equipment: ["Multiple IDEs", "GitHub account", "LeetCode Premium"],
       achievements: [
-        "100+ problemas resueltos en LeetCode",
         "Participé en hackathon local",
         "Contribuciones a proyectos open source"
       ],
@@ -142,23 +97,12 @@ const CustomSection3 = () => {
       ]
     },
     {
-      category: "Ciencias",
-      items: [
-        "Astronomía y exploración espacial",
-        "Física cuántica",
-        "Neurociencia cognitiva",
-        "Biotecnología",
-        "Energías renovables"
-      ]
-    },
-    {
       category: "Cultura",
       items: [
         "Historia de la tecnología",
-        "Filosofía de la ciencia",
-        "Arte digital y generativo",
-        "Documentales científicos",
-        "Podcasts de tecnología"
+        "Podcasts de tecnología",
+        "Historia del mundo",
+        "Historia sobre Limón"
       ]
     }
   ];
@@ -294,13 +238,13 @@ const CustomSection3 = () => {
             
             <div className="balance-benefits">
               <div className="benefit-item">
-                <h4>Creatividad</h4>
-                <p>La fotografía y música estimulan mi lado creativo, esencial para resolver problemas de programación de formas innovadoras.</p>
+                <h4>Proactivo</h4>
+                <p>Ser una persona proactiva a la hora de estudiar y aprender, estar en constante aprendizaje de lo que se mueve en el mercado además de las tecnologías..</p>
               </div>
               
               <div className="benefit-item">
                 <h4>Concentración</h4>
-                <p>La lectura y los puzzles en videojuegos mejoran mi capacidad de concentración y análisis profundo.</p>
+                <p>El escuchar música constantemente me mantiene relajado y me ayuda a trabajar mejor, además de quitarme el aburrimiento.</p>
               </div>
               
               <div className="benefit-item">
@@ -317,11 +261,11 @@ const CustomSection3 = () => {
             <div className="future-goals">
               <h3>Metas Futuras</h3>
               <ul>
-                <li>Crear un blog combinando fotografía y tecnología</li>
+                <li>Crear una aplicación utilizando una blockchain y Smart Contracts combinando tecnologías</li>
                 <li>Desarrollar un videojuego simple como proyecto personal</li>
                 <li>Completar el ascenso a todos los volcanes de Costa Rica</li>
-                <li>Leer 50 libros en 2024</li>
-                <li>Aprender producción musical avanzada</li>
+                <li>Tener una YAMAHA R1</li>
+                <li>Ser un empresario exitoso</li>
               </ul>
             </div>
           </div>
@@ -336,13 +280,13 @@ const CustomSection3 = () => {
           
           <div className="community-grid">
             <div className="community-item">
-              <h4>Club de Fotografía TEC</h4>
-              <p>Salidas grupales y retroalimentación constructiva</p>
+              <h4>Comunidad DojoCoding </h4>
+              <p>Comunidad de Dojo Coding, una comunidad directa del WEB3 y blockchain en Costa Rica</p>
             </div>
             
             <div className="community-item">
-              <h4>Grupo de Senderismo</h4>
-              <p>Exploración segura y compartir conocimientos de montañismo</p>
+              <h4>Guía de Senderismo</h4>
+              <p>Trabajar con cruceros en temporada alta</p>
             </div>
             
             <div className="community-item">
@@ -351,8 +295,8 @@ const CustomSection3 = () => {
             </div>
             
             <div className="community-item">
-              <h4>Club de Lectura</h4>
-              <p>Análisis de libros tech y discusiones filosóficas</p>
+              <h4>Motocicletas</h4>
+              <p>Salir en rodadas con amigos y participar en giras</p>
             </div>
           </div>
         </section>

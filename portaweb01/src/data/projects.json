@@ -1,0 +1,154 @@
+{
+  "openSourceProjects": [
+    {
+      "id": 1,
+      "name": "SafeTrust - Frontend",
+      "repository": "https://github.com/safetrustcr/frontend-SafeTrust",
+      "liveUrl": null,
+      "description": "Plataforma descentralizada de Costa Rica para transacciones P2P seguras con criptomonedas utilizando tecnología blockchain y escrow trustless.",
+      "myContribution": "Contribuí al desarrollo del frontend de esta plataforma costarricense de pagos P2P seguros, implementando componentes de React y mejorando la integración con wallets blockchain como Albedo.",
+      "technologies": ["TypeScript", "React", "Next.js", "Tailwind CSS", "Blockchain"],
+      "ecosystem": "Stellar",
+      "status": "active",
+      "contributionType": "Frontend Development",
+      "achievements": [
+        "Desarrollo de componentes de UI para transacciones seguras",
+        "Integración con wallets de criptomonedas",
+        "Implementación de diseño responsive siguiendo Figma"
+      ],
+      "startDate": "2024",
+      "endDate": null,
+      "features": [
+        "Sistema de escrow descentralizado",
+        "Integración con Stellar blockchain",
+        "Gestión de pagos en criptomonedas",
+        "Transparencia total en transacciones"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Starknet Quest",
+      "repository": "https://github.com/lfglabs-dev/starknet.quest",
+      "liveUrl": null,
+      "description": "La herramienta líder de quests on-chain de Starknet para onboarding de usuarios a través de experiencias gamificadas.",
+      "myContribution": "Contribuidor activo en la plataforma principal de quests de Starknet, ayudando a crear experiencias gamificadas para el onboarding de usuarios y mejorando componentes del sistema de achievements.",
+      "technologies": ["TypeScript", "React", "Next.js", "Starknet", "Cairo"],
+      "ecosystem": "Starknet",
+      "status": "active",
+      "contributionType": "Full Stack Development",
+      "achievements": [
+        "Contribuciones al sistema de quests gamificadas",
+        "Mejoras en la experiencia de usuario",
+        "Integración con contratos inteligentes de Starknet"
+      ],
+      "startDate": "2024",
+      "endDate": null,
+      "features": [
+        "Sistema de quests on-chain",
+        "NFTs como prueba de completación",
+        "Achievements basados en milestones",
+        "Starknet Quest Land - representación visual del progreso"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Starkiro",
+      "repository": "https://github.com/KaizeNodeLabs/starkiro",
+      "liveUrl": null,
+      "description": "Proyecto blockchain del ecosistema Starknet desarrollado por Kaize Node Labs.",
+      "myContribution": "Colaboré en el desarrollo de este proyecto del ecosistema Starknet, contribuyendo a la implementación de funcionalidades core y mejoras en la arquitectura.",
+      "technologies": ["Cairo", "Starknet", "TypeScript", "Smart Contracts"],
+      "ecosystem": "Starknet",
+      "status": "active",
+      "contributionType": "Blockchain Development",
+      "achievements": [
+        "Desarrollo de contratos inteligentes",
+        "Optimización de funcionalidades blockchain",
+        "Testing y debugging de código"
+      ],
+      "startDate": "2024",
+      "endDate": null
+    },
+    {
+      "id": 4,
+      "name": "SafeSwap",
+      "repository": "https://github.com/KaizeNodeLabs/SafeSwap",
+      "liveUrl": null,
+      "description": "Protocolo de intercambio seguro en el ecosistema Starknet.",
+      "myContribution": "Participé en el desarrollo de esta plataforma de intercambio, contribuyendo a la implementación de funcionalidades de trading seguro y mejoras en la interfaz de usuario.",
+      "technologies": ["Cairo", "TypeScript", "React", "Starknet"],
+      "ecosystem": "Starknet",
+      "status": "active",
+      "contributionType": "DeFi Development",
+      "achievements": [
+        "Implementación de lógica de swap",
+        "Desarrollo de componentes frontend",
+        "Integración con contratos de Starknet"
+      ],
+      "startDate": "2024",
+      "endDate": null
+    },
+    {
+      "id": 5,
+      "name": "Cairo VM Go",
+      "repository": "https://github.com/NethermindEth/cairo-vm-go",
+      "liveUrl": null,
+      "description": "Implementación de la Cairo Virtual Machine en Go por Nethermind, infraestructura crítica para el ecosistema Starknet.",
+      "myContribution": "Contribuí a este proyecto fundamental de infraestructura blockchain, ayudando en la implementación y testing de componentes de la Cairo VM en Go.",
+      "technologies": ["Go", "Cairo", "Blockchain Infrastructure"],
+      "ecosystem": "Starknet",
+      "status": "active",
+      "contributionType": "Infrastructure Development",
+      "achievements": [
+        "Contribuciones a infraestructura crítica de Starknet",
+        "Testing de componentes de la VM",
+        "Optimización de rendimiento"
+      ],
+      "startDate": "2024",
+      "endDate": null
+    }
+  ],
+  "personalProjects": [
+    {
+      "id": 1,
+      "name": "Portafolio Web Personal",
+      "repository": "https://github.com/gadyrcdz/portaweb01",
+      "liveUrl": "https://gadyrcdz.github.io/portaweb01",
+      "description": "Portafolio web desarrollado como proyecto del curso IC8057 del TEC, mostrando mis habilidades y proyectos.",
+      "technologies": ["React", "JavaScript", "CSS", "GitHub Pages"],
+      "category": "web",
+      "status": "in-progress",
+      "features": [
+        "Sección de trabajos académicos con filtros",
+        "Blog técnico sobre blockchain",
+        "Sistema de recomendaciones",
+        "Exportación de CV a PDF"
+      ],
+      "challenges": [
+        "Arquitectura escalable con React",
+        "Persistencia de datos externa",
+        "Diseño responsive profesional"
+      ],
+      "learned": [
+        "React Hooks avanzados",
+        "Diseño de arquitectura frontend",
+        "Despliegue con GitHub Pages"
+      ]
+    }
+  ],
+  "contributionStats": {
+    "totalContributions": "15+",
+    "totalProjects": 6,
+    "ecosystems": ["Starknet", "Stellar"],
+    "languages": ["TypeScript", "JavaScript", "Cairo", "Go", "Python"],
+    "organizations": ["OnlyDust", "LFG Labs", "Kaize Node Labs", "Nethermind", "SafeTrust CR"]
+  },
+  "onlyDustProfile": {
+    "username": "gadyrcdz",
+    "profileUrl": "https://app.onlydust.com/u/gadyrcdz",
+    "totalPRs": "10+",
+    "projectsContributed": 5,
+    "ecosystems": ["Starknet", "Stellar"],
+    "description": "Contribuidor activo con múltiples PRs aceptados y proyectos completados"
+  }
+}

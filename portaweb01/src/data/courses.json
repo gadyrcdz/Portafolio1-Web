@@ -1,0 +1,212 @@
+{
+  "courses": [
+    {
+      "id": "ic8057",
+      "code": "IC8057",
+      "name": "Introducción al Desarrollo de Páginas Web",
+      "semester": "I Semestre 2025",
+      "description": "Curso introductorio al desarrollo web que abarca HTML, CSS, JavaScript y frameworks modernos.",
+      "professor": "Nombre del Profesor",
+      "works": [
+        {
+          "id": "lab1",
+          "name": "Laboratorio 1: HTML Básico",
+          "type": "laboratorio",
+          "description": "Creación de una página web básica utilizando HTML semántico",
+          "deliveryDate": "2025-02-15",
+          "technologies": ["HTML", "CSS"],
+          "repositoryLink": "https://github.com/gadyrcdz/desarrollo-moderno-Gadyr",
+          "deployedLink": "https://github.com/gadyrcdz/desarrollo-moderno-Gadyr",
+          "grade": null,
+          "status": "completed"
+        },
+        {
+          "id": "lab2",
+          "name": "Laboratorio 2: CSS y Diseño Responsive",
+          "type": "laboratorio",
+          "description": "Desarrollo de diseños responsive utilizando CSS avanzado, flexbox y grid",
+          "deliveryDate": "2025-03-01",
+          "technologies": ["HTML", "CSS", "Flexbox", "CSS Grid"],
+          "repositoryLink": "https://github.com/gadyrcdz/Laboratorio2",
+          "deployedLink": "https://deploy-preview-1--incomparable-pika-f58c60.netlify.app/",
+          "grade": null,
+          "status": "completed"
+        },
+        {
+          "id": "lab3",
+          "name": "Laboratorio 3: Selectores CSS y Box Model",
+          "type": "laboratorio",
+          "description": "Práctica avanzada de selectores CSS, especificidad y manejo del modelo de caja (box model)",
+          "deliveryDate": "2025-03-08",
+          "technologies": ["HTML", "CSS", "Box Model", "Selectores CSS"],
+          "repositoryLink": "https://github.com/gadyrcdz/Laboratorio2/tree/lab3-selectores-boxmodel",
+          "deployedLink": "https://deploy-preview-1--incomparable-pika-f58c60.netlify.app/",
+          "grade": null,
+          "status": "completed"
+        },
+        {
+          "id": "lab5",
+          "name": "Laboratorio 5: Diseño Responsive Avanzado",
+          "type": "laboratorio",
+          "description": "Implementación de técnicas avanzadas de diseño responsive con media queries y layouts adaptativos",
+          "deliveryDate": "2025-03-22",
+          "technologies": ["HTML", "CSS", "Responsive Design", "Media Queries"],
+          "repositoryLink": "https://github.com/gadyrcdz/Laboratorio2/tree/lab5-responsive",
+          "deployedLink": "https://deploy-preview-1--incomparable-pika-f58c60.netlify.app/",
+          "grade": null,
+          "status": "completed"
+        },
+        {
+          "id": "portafolio",
+          "name": "Portafolio Personal",
+          "type": "proyecto",
+          "description": "Desarrollo de un portafolio web personal con React, implementando todas las secciones requeridas del curso",
+          "deliveryDate": "2025-03-15",
+          "technologies": ["React", "CSS", "JavaScript", "GitHub Pages"],
+          "repositoryLink": "https://github.com/gadyrcdz/Portafolio1-Web",
+          "deployedLink": "https://github.com/gadyrcdz/Portafolio1-Web",
+          "grade": null,
+          "status": "in-progress"
+        }
+      ]
+    },
+    {
+      "id": "ic3101",
+      "code": "IC3101",
+      "name": "Arquitectura de Computadoras",
+      "semester": "I Semestre 2023",
+      "description": "Curso teórico-práctico que estudia los recursos de la computadora visibles al programador de bajo nivel, incluyendo programación en lenguaje ensamblador y conceptos arquitectónicos de computadoras actuales.",
+      "professor": "Ing. David Ricardo Mora Fonseca, M. Ed.",
+      "credits": 4,
+      "schedule": "Lunes y miércoles 17:00 a 18:50",
+      "works": [
+        {
+          "id": "proyecto1",
+          "name": "Proyecto 1: Programación en Ensamblador Básico",
+          "type": "proyecto",
+          "description": "Implementación de programas básicos en lenguaje ensamblador utilizando aritmética y flujo de control",
+          "deliveryDate": "2023-04-15",
+          "technologies": ["Assembly", "Lenguaje Ensamblador", "Arquitectura x86"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 88,
+          "status": "completed"
+        },
+        {
+          "id": "proyecto2", 
+          "name": "Proyecto 2: Rutinas y Paso de Parámetros",
+          "type": "proyecto",
+          "description": "Desarrollo de rutinas complejas con paso de parámetros y construcción de macros en ensamblador",
+          "deliveryDate": "2023-4-20",
+          "technologies": ["Assembly", "Macros", "Procedimientos"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 92,
+          "status": "completed"
+        },
+        {
+          "id": "proyecto3",
+          "name": "Proyecto 3: Sistemas de Entrada/Salida",
+          "type": "proyecto", 
+          "description": "Implementación de sistemas de E/S con DMA y manejo de dispositivos periféricos",
+          "deliveryDate": "2023-5-15",
+          "technologies": ["Assembly", "DMA", "I/O Systems"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 85,
+          "status": "completed"
+        },
+        {
+          "id": "proyecto4",
+          "name": "Proyecto 4: Multiprocesadores y Sistemas Empotrados",
+          "type": "proyecto",
+          "description": "Análisis y programación para sistemas multiprocesador y arquitecturas empotradas",
+          "deliveryDate": "2024-12-01",
+          "technologies": ["Assembly", "Multicore", "Embedded Systems"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 90,
+          "status": "completed"
+        },
+        {
+          "id": "investigacion1",
+          "name": "Investigación 1: Pipeline y Modelos de Alto Rendimiento",
+          "type": "investigación",
+          "description": "Investigación sobre técnicas de pipeline, paralelismo y optimización de rendimiento en procesadores modernos",
+          "deliveryDate": "2023-5-30",
+          "technologies": ["Investigación", "Pipeline", "Performance Analysis"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 95,
+          "status": "completed"
+        },
+        {
+          "id": "investigacion2",
+          "name": "Investigación 2: RISC vs CISC",
+          "type": "investigación", 
+          "description": "Análisis comparativo entre arquitecturas RISC y CISC, ventajas y aplicaciones actuales",
+          "deliveryDate": "2023-6-30",
+          "technologies": ["Investigación", "RISC", "CISC", "Computer Architecture"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 93,
+          "status": "completed"
+        },
+        {
+          "id": "examen1",
+          "name": "Examen Parcial 1: Fundamentos y Aritmética",
+          "type": "examen",
+          "description": "Evaluación sobre conceptos básicos de arquitectura, ALU, sistemas numéricos y operaciones aritméticas",
+          "deliveryDate": "2023-05-25",
+          "technologies": ["Teoría", "ALU", "Arithmetic"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 87,
+          "status": "completed"
+        },
+        {
+          "id": "examen2", 
+          "name": "Examen Parcial 2: Ensamblador y Sistemas Avanzados",
+          "type": "examen",
+          "description": "Evaluación sobre programación en ensamblador, pipeline, multiprocesadores y sistemas empotrados",
+          "deliveryDate": "2023-03-05",
+          "technologies": ["Assembly", "Pipeline", "Multiprocessor"],
+          "repositoryLink": null,
+          "deployedLink": null,
+          "grade": 89,
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "workTypes": [
+    "laboratorio",
+    "tarea", 
+    "proyecto",
+    "investigación",
+    "examen",
+    "otro"
+  ],
+  "technologies": [
+    "HTML",
+    "CSS",
+    "Flexbox",
+    "CSS Grid",
+    "Box Model",
+    "Selectores CSS",
+    "Responsive Design",
+    "Media Queries",
+    "JavaScript",
+    "React",
+    "Vue",
+    "Python",
+    "Java",
+    "Assembly",
+    "Lenguaje Ensamblador",
+    "Git",
+    "Node.js",
+    "Bootstrap",
+    "Tailwind CSS",
+    "GitHub Pages"
+  ]
+}

@@ -1,3 +1,4 @@
+/* src/pages/Home.css - CLASES ESPECÍFICAS */
 .home {
   padding-top: 2rem;
 }
@@ -48,28 +49,45 @@
   margin-bottom: 2rem;
 }
 
-.social-links {
+/* ICONOS SOCIALES ESPECÍFICOS DEL HERO */
+.hero .social-links {
   display: flex;
   gap: 1rem;
 }
 
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  background: var(--background-gray);
-  border-radius: 50%;
-  color: var(--text-secondary);
+.hero .social-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  background: #2563eb !important;
+  border-radius: 50% !important;
+  color: white !important;
   text-decoration: none;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
 }
 
-.social-link:hover {
-  background: var(--primary-color);
-  color: white;
+.hero .social-link:hover {
+  background: #1d4ed8 !important;
+  color: white !important;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.hero .social-link svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.hero .social-link:hover svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
 }
 
 .hero-image {

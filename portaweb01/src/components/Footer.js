@@ -1,5 +1,6 @@
+// src/components/Footer.js
 import React from 'react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Heart } from 'lucide-react';
 import personalData from '../data/personal-info.json';
 import './Footer.css';
 
@@ -15,7 +16,7 @@ const Footer = () => {
             <h3>Contacto</h3>
             <div className="contact-links">
               <a href={links.email} className="contact-link">
-                <Mail size={18} />
+                📧
                 {basicInfo.email}
               </a>
               <p className="contact-item">

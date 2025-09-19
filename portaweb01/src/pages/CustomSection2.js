@@ -1,116 +1,26 @@
-// src/pages/CustomSection2.js (Proyectos Personales)
+// src/pages/CustomSection2.js (Proyectos Open Source)
 import React, { useState, useEffect } from 'react';
-import { Github, ExternalLink, Star, GitBranch, Calendar } from 'lucide-react';
+import { Github, ExternalLink, Star, GitBranch, Calendar, Code } from 'lucide-react';
+import projectsData from '../data/projects.json';
 import './CustomSection2.css';
 
 const CustomSection2 = () => {
   const [projects, setProjects] = useState([]);
   const [filter, setFilter] = useState('all');
 
-  // Datos de ejemplo para proyectos personales
-  const sampleProjects = [
-    {
-      id: 1,
-      title: "Calculadora de Notas TEC",
-      description: "Aplicación web para que estudiantes del TEC puedan calcular sus notas finales y planificar qué necesitan en exámenes finales.",
-      longDescription: "Esta herramienta permite a los estudiantes ingresar sus notas de tareas, laboratorios y exámenes parciales para calcular automáticamente qué nota necesitan en el examen final para aprobar el curso.",
-      technologies: ["JavaScript", "HTML", "CSS", "Local Storage"],
-      category: "web",
-      status: "completed",
-      startDate: "2024-01-15",
-      endDate: "2024-02-01",
-      githubUrl: "https://github.com/tu-usuario/calculadora-notas-tec",
-      liveUrl: "https://tu-usuario.github.io/calculadora-notas-tec",
-      features: [
-        "Cálculo automático de notas finales",
-        "Simulación de escenarios 'qué pasaría si'",
-        "Guardado local de datos",
-        "Interfaz responsiva"
-      ],
-      challenges: [
-        "Implementar las diferentes modalidades de evaluación del TEC",
-        "Crear una interfaz intuitiva para entrada de datos",
-        "Manejar casos edge como notas extra o bonus"
-      ],
-      learned: [
-        "Manipulación del DOM con JavaScript",
-        "Local Storage para persistencia",
-        "Validación de formularios"
-      ]
-    },
-    {
-      id: 2,
-      title: "Bot de Discord para Estudio",
-      description: "Bot personalizado para el servidor de Discord de mi grupo de estudio que ayuda con recordatorios y organización.",
-      longDescription: "Un bot que ayuda a coordinar sesiones de estudio, envía recordatorios de entregas, y mantiene un registro de recursos útiles compartidos por el grupo.",
-      technologies: ["Python", "Discord.py", "SQLite", "Heroku"],
-      category: "automation",
-      status: "in-progress",
-      startDate: "2024-01-20",
-      endDate: null,
-      githubUrl: "https://github.com/tu-usuario/discord-study-bot",
-      liveUrl: null,
-      features: [
-        "Comandos para crear recordatorios",
-        "Sistema de calendario compartido",
-        "Biblioteca de recursos de estudio",
-        "Estadísticas de participación"
-      ],
-      challenges: [
-        "Aprender la API de Discord",
-        "Manejar múltiples time zones",
-        "Diseñar una base de datos eficiente"
-      ],
-      learned: [
-        "Programación con Python async/await",
-        "Trabajo con APIs externas",
-        "Base de datos SQLite"
-      ]
-    },
-    {
-      id: 3,
-      title: "Generador de Horarios",
-      description: "Script que ayuda a generar horarios de clases optimizados basado en preferencias personales.",
-      longDescription: "Herramienta que toma la oferta de cursos del TEC y genera horarios posibles eliminando conflictos, considerando preferencias como no tener clases muy temprano o muy seguidas.",
-      technologies: ["Python", "Pandas", "Tkinter"],
-      category: "tool",
-      status: "completed",
-      startDate: "2023-11-01",
-      endDate: "2023-12-15",
-      githubUrl: "https://github.com/tu-usuario/generador-horarios",
-      liveUrl: null,
-      features: [
-        "Importación de datos de cursos",
-        "Filtros por preferencias personales",
-        "Exportación a diferentes formatos",
-        "Interfaz gráfica simple"
-      ],
-      challenges: [
-        "Algoritmo de optimización de horarios",
-        "Parsing de datos complejos",
-        "Interface de usuario intuitiva"
-      ],
-      learned: [
-        "Algoritmos de backtracking",
-        "Manipulación de datos con Pandas",
-        "Creación de GUI con Tkinter"
-      ]
-    }
-  ];
-
   useEffect(() => {
-    setProjects(sampleProjects);
+    setProjects(projectsData.openSourceProjects);
   }, []);
 
   const filteredProjects = filter === 'all' 
     ? projects 
-    : projects.filter(project => project.category === filter);
+    : projects.filter(project => project.ecosystem === filter);
 
   const getStatusBadge = (status) => {
     const statusConfig = {
+      'active': { label: 'Activo', class: 'status-active' },
       'completed': { label: 'Completado', class: 'status-completed' },
-      'in-progress': { label: 'En Desarrollo', class: 'status-in-progress' },
-      'planned': { label: 'Planeado', class: 'status-planned' }
+      'archived': { label: 'Archivado', class: 'status-archived' }
     };
     
     const config = statusConfig[status] || { label: status, class: 'status-default' };
@@ -119,20 +29,17 @@ const CustomSection2 = () => {
 
   const formatDate = (dateString) => {
     if (!dateString) return 'Presente';
-    return new Date(dateString).toLocaleDateString('es-ES', {
-      year: 'numeric',
-      month: 'short'
-    });
+    return dateString;
   };
 
   return (
     <div className="projects-section">
       <div className="container">
         <header className="section-header">
-          <h1>Proyectos Personales</h1>
+          <h1>Contribuciones Open Source</h1>
           <p>
-            Una colección de proyectos que he desarrollado por iniciativa propia, 
-            explorando diferentes tecnologías y resolviendo problemas reales.
+            Proyectos blockchain en los que he contribuido activamente a través de OnlyDust,
+            trabajando en los ecosistemas Starknet y Stellar.
           </p>
         </header>
 
@@ -144,22 +51,16 @@ const CustomSection2 = () => {
             Todos
           </button>
           <button 
-            className={`filter-btn ${filter === 'web' ? 'active' : ''}`}
-            onClick={() => setFilter('web')}
+            className={`filter-btn ${filter === 'Starknet' ? 'active' : ''}`}
+            onClick={() => setFilter('Starknet')}
           >
-            Web
+            Starknet
           </button>
           <button 
-            className={`filter-btn ${filter === 'automation' ? 'active' : ''}`}
-            onClick={() => setFilter('automation')}
+            className={`filter-btn ${filter === 'Stellar' ? 'active' : ''}`}
+            onClick={() => setFilter('Stellar')}
           >
-            Automatización
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'tool' ? 'active' : ''}`}
-            onClick={() => setFilter('tool')}
-          >
-            Herramientas
+            Stellar
           </button>
         </div>
 
@@ -168,113 +69,139 @@ const CustomSection2 = () => {
             <div key={project.id} className="project-card">
               <div className="project-header">
                 <div className="project-title-section">
-                  <h3>{project.title}</h3>
+                  <h3>{project.name}</h3>
                   {getStatusBadge(project.status)}
                 </div>
-                <div className="project-dates">
-                  <Calendar size={16} />
-                  {formatDate(project.startDate)} - {formatDate(project.endDate)}
+                <div className="project-meta">
+                  <span className="ecosystem-badge">{project.ecosystem}</span>
+                  <span className="contribution-type">{project.contributionType}</span>
                 </div>
               </div>
 
               <p className="project-description">{project.description}</p>
               
+              <div className="my-contribution">
+                <h4>Mi Contribución:</h4>
+                <p>{project.myContribution}</p>
+              </div>
+
               <div className="project-technologies">
                 {project.technologies.map(tech => (
                   <span key={tech} className="tech-tag">{tech}</span>
                 ))}
               </div>
 
-              <div className="project-details">
-                <details>
-                  <summary>Ver más detalles</summary>
-                  <div className="project-expanded">
-                    <div className="project-long-description">
-                      <p>{project.longDescription}</p>
-                    </div>
+              {project.achievements && (
+                <div className="project-achievements">
+                  <details>
+                    <summary>Ver logros y detalles</summary>
+                    <div className="project-expanded">
+                      <div className="achievements-list">
+                        <h4>Logros:</h4>
+                        <ul>
+                          {project.achievements.map((achievement, index) => (
+                            <li key={index}>{achievement}</li>
+                          ))}
+                        </ul>
+                      </div>
 
-                    <div className="project-features">
-                      <h4>Características principales:</h4>
-                      <ul>
-                        {project.features.map((feature, index) => (
-                          <li key={index}>{feature}</li>
-                        ))}
-                      </ul>
-                    </div>
+                      {project.features && (
+                        <div className="features-list">
+                          <h4>Características del Proyecto:</h4>
+                          <ul>
+                            {project.features.map((feature, index) => (
+                              <li key={index}>{feature}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
-                    <div className="project-challenges">
-                      <h4>Desafíos enfrentados:</h4>
-                      <ul>
-                        {project.challenges.map((challenge, index) => (
-                          <li key={index}>{challenge}</li>
-                        ))}
-                      </ul>
+                      <div className="project-period">
+                        <Calendar size={16} />
+                        <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
+                      </div>
                     </div>
-
-                    <div className="project-learned">
-                      <h4>Aprendizajes clave:</h4>
-                      <ul>
-                        {project.learned.map((learning, index) => (
-                          <li key={index}>{learning}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </details>
-              </div>
+                  </details>
+                </div>
+              )}
 
               <div className="project-actions">
-                {project.githubUrl && (
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <Github size={18} />
-                    Código
-                  </a>
-                )}
-                {project.liveUrl && (
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <ExternalLink size={18} />
-                    Ver proyecto
-                  </a>
-                )}
+                <a 
+                  href={project.repository} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <Github size={18} />
+                  Repositorio
+                </a>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="projects-stats">
-          <h2>Estadísticas de Proyectos</h2>
+        <div className="contribution-stats">
+          <h2>Estadísticas de Contribuciones</h2>
           <div className="stats-grid">
             <div className="stat-item">
-              <GitBranch size={24} />
+              <Code size={32} />
               <div>
-                <h3>{projects.length}</h3>
-                <p>Proyectos totales</p>
+                <h3>{projectsData.contributionStats.totalContributions}</h3>
+                <p>Contribuciones totales</p>
               </div>
             </div>
             <div className="stat-item">
-              <Star size={24} />
+              <GitBranch size={32} />
               <div>
-                <h3>{projects.filter(p => p.status === 'completed').length}</h3>
-                <p>Completados</p>
+                <h3>{projectsData.contributionStats.totalProjects}</h3>
+                <p>Proyectos</p>
               </div>
             </div>
             <div className="stat-item">
-              <Calendar size={24} />
+              <Star size={32} />
               <div>
-                <h3>{projects.filter(p => p.status === 'in-progress').length}</h3>
-                <p>En desarrollo</p>
+                <h3>{projectsData.contributionStats.ecosystems.length}</h3>
+                <p>Ecosistemas</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="onlydust-section">
+          <h2>Perfil OnlyDust</h2>
+          <div className="onlydust-card">
+            <p>
+              Soy contribuidor activo en OnlyDust, plataforma que conecta desarrolladores 
+              con proyectos blockchain de código abierto.
+            </p>
+            <div className="onlydust-stats">
+              <div className="onlydust-stat">
+                <strong>{projectsData.onlyDustProfile.totalPRs}</strong>
+                <span>Pull Requests</span>
+              </div>
+              <div className="onlydust-stat">
+                <strong>{projectsData.onlyDustProfile.projectsContributed}</strong>
+                <span>Proyectos</span>
+              </div>
+            </div>
+            <a 
+              href={projectsData.onlyDustProfile.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="onlydust-link btn btn-primary"
+            >
+              Ver mi perfil en OnlyDust
+              <ExternalLink size={16} />
+            </a>
+          </div>
+        </div>
+
+        <div className="tech-stack">
+          <h3>Stack Tecnológico</h3>
+          <div className="tech-list">
+            {projectsData.contributionStats.languages.map(lang => (
+              <span key={lang} className="tech-item">{lang}</span>
+            ))}
           </div>
         </div>
       </div>

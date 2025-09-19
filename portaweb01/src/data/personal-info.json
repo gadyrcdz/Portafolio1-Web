@@ -1,0 +1,50 @@
+{
+  "basicInfo": {
+    "name": "Gadyr Calderón Díaz",
+    "title": "Estudiante de Ingeniería en Computación",
+    "email": "gadcalderon@estudiantec.cr",
+    "phone": "+506 8599-4094",
+    "location": "Costa Rica",
+    "photo": "/images/photo.jpeg",
+    "bio": "Estudiante apasionado por el desarrollo web y la tecnología, cursando Ingeniería en Computación en el TEC."
+  },
+  "jsonLD": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gadyr Calderón Díaz",
+    "jobTitle": "Estudiante de Ingeniería en Computación",
+    "email": "gadcalderon@estudiantec.cr",
+    "image": "/images/photo.jpeg",
+    "url": "https://gadyrcdz.github.io/portfolio-ic8057",
+    "sameAs": [
+      "https://linkedin.com/in/gadyrcdz",
+      "https://github.com/gadyrcdz"
+    ]
+  },
+  "skills": {
+    "programming": [
+      { "name": "JavaScript", "level": 75 },
+      { "name": "HTML/CSS", "level": 85 },
+      { "name": "React", "level": 60 },
+      { "name": "Python", "level": 70 }
+    ],
+    "tools": [
+      { "name": "Git", "level": 80 },
+      { "name": "VSCode", "level": 90 },
+      { "name": "Figma", "level": 65 }
+    ]
+  },
+  "links": {
+    "github": "https://github.com/gadyrcdz",
+    "linkedin": "https://linkedin.com/in/gadyrcdz",
+    "email": "mailto:gadcalderon@estudiantec.cr"
+  },
+  "certifications": [
+    {
+      "name": "Certificación de Ejemplo",
+      "issuer": "Plataforma Online",
+      "date": "2024",
+      "link": "https://enlace-certificacion.com"
+    }
+  ]
+}

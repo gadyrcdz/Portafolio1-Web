@@ -1,0 +1,81 @@
+{
+  "courses": [
+    {
+      "id": "ic8057",
+      "code": "IC8057",
+      "name": "Introducción al Desarrollo de Páginas Web",
+      "semester": "I Semestre 2024",
+      "description": "Curso introductorio al desarrollo web que abarca HTML, CSS, JavaScript y frameworks modernos.",
+      "professor": "Nombre del Profesor",
+      "works": [
+        {
+          "id": "lab1",
+          "name": "Laboratorio 1: HTML Básico",
+          "type": "laboratorio",
+          "description": "Creación de una página web básica utilizando HTML semántico",
+          "deliveryDate": "2024-02-15",
+          "technologies": ["HTML", "CSS"],
+          "repositoryLink": "https://github.com/tu-usuario/lab1-html",
+          "deployedLink": "https://tu-usuario.github.io/lab1-html",
+          "grade": null,
+          "status": "completed"
+        },
+        {
+          "id": "proyecto1",
+          "name": "Proyecto 1: Sitio Web Responsivo",
+          "type": "proyecto",
+          "description": "Desarrollo de un sitio web completo con diseño responsivo",
+          "deliveryDate": "2024-03-20",
+          "technologies": ["HTML", "CSS", "JavaScript"],
+          "repositoryLink": "https://github.com/tu-usuario/proyecto1",
+          "deployedLink": "https://tu-usuario.github.io/proyecto1",
+          "grade": null,
+          "status": "in-progress"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo-curso",
+      "code": "IC1234",
+      "name": "Curso de Ejemplo",
+      "semester": "II Semestre 2023",
+      "description": "Descripción del curso anterior para mostrar historial académico",
+      "professor": "Profesor Ejemplo",
+      "works": [
+        {
+          "id": "tarea1",
+          "name": "Tarea 1: Algoritmos Básicos",
+          "type": "tarea",
+          "description": "Implementación de algoritmos de ordenamiento",
+          "deliveryDate": "2023-09-10",
+          "technologies": ["Python"],
+          "repositoryLink": "https://github.com/tu-usuario/tarea1-algoritmos",
+          "deployedLink": null,
+          "grade": 95,
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "workTypes": [
+    "laboratorio",
+    "tarea", 
+    "proyecto",
+    "investigación",
+    "examen",
+    "otro"
+  ],
+  "technologies": [
+    "HTML",
+    "CSS", 
+    "JavaScript",
+    "React",
+    "Vue",
+    "Python",
+    "Java",
+    "Git",
+    "Node.js",
+    "Bootstrap",
+    "Tailwind CSS"
+  ]
+}

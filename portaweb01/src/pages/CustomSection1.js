@@ -1,4 +1,3 @@
-// src/pages/CustomSection1.js
 import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, Tag, User } from 'lucide-react';
 import blogData from '../data/blog-posts.json';

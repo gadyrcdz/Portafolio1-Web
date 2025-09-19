@@ -13,13 +13,11 @@ const Recommendations = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Cargar recomendaciones del localStorage al inicializar
   useEffect(() => {
     const savedRecommendations = localStorage.getItem('portfolio-recommendations');
     if (savedRecommendations) {
       setRecommendations(JSON.parse(savedRecommendations));
     } else {
-      // Datos de ejemplo para demostrar el funcionamiento
       const exampleRecommendations = [
         {
           id: 1,
@@ -64,19 +62,16 @@ const Recommendations = () => {
       return;
     }
 
-    // Crear nueva recomendación
     const recommendation = {
       id: Date.now(),
       ...newRecommendation,
       date: new Date().toISOString().split('T')[0]
     };
 
-    // Actualizar estado y localStorage
     const updatedRecommendations = [...recommendations, recommendation];
     setRecommendations(updatedRecommendations);
     localStorage.setItem('portfolio-recommendations', JSON.stringify(updatedRecommendations));
 
-    // Limpiar formulario
     setNewRecommendation({
       name: '',
       email: '',

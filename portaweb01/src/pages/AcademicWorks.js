@@ -18,7 +18,6 @@ const AcademicWorks = () => {
 
   useEffect(() => {
     setCourses(coursesData.courses);
-    // Crear lista plana de todos los trabajos con información del curso
     const allWorks = coursesData.courses.flatMap(course => 
       course.works.map(work => ({
         ...work,

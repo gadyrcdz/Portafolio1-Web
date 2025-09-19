@@ -43,7 +43,6 @@ body {
   padding: 0 1rem;
 }
 
-/* Botones reutilizables */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -81,7 +80,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Responsividad básica */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -93,7 +91,6 @@ body {
   }
 }
 
-/* src/components/Navbar.css */
 .navbar {
   background: var(--background-white);
   box-shadow: var(--shadow);

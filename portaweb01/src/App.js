@@ -12,11 +12,12 @@ import CustomSection1 from './pages/CustomSection1';
 import CustomSection2 from './pages/CustomSection2';
 import CustomSection3 from './pages/CustomSection3';
 import personalData from './data/personal-info.json';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portaweb01">
       <div className="App">
         <Helmet>
           <title>{personalData.basicInfo.name} - Portafolio</title>

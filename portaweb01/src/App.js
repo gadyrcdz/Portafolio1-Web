@@ -16,7 +16,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/portaweb01">
+    <Router>
       <div className="App">
         <Helmet>
           <title>{personalData.basicInfo.name} - Portafolio</title>

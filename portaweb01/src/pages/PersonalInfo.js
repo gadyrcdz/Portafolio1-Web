@@ -68,7 +68,7 @@ const PersonalInfo = () => {
             <div className="profile-card">
               <div className="profile-image">
                 <img 
-                  src={basicInfo.photo} 
+                  src={`${process.env.PUBLIC_URL}/${basicInfo.photo}`} 
                   alt={`Foto de ${basicInfo.name}`}
                   onError={(e) => {
                     e.target.src = 'https://via.placeholder.com/200x200?text=Foto';

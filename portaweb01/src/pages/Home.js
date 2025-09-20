@@ -61,7 +61,7 @@ const Home = () => {
 
           <div className="hero-image">
             <img 
-              src={basicInfo.photo} 
+              src={`${process.env.PUBLIC_URL}/${basicInfo.photo}`} 
               alt={`Foto de ${basicInfo.name}`}
               className="profile-photo"
             />

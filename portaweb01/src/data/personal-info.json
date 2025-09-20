@@ -5,7 +5,7 @@
     "email": "gadyrcalde@gmail.com",
     "phone": "+506 8599 4094",
     "location": "Limón, Costa Rica",
-    "photo": "images/perfil.jpeg",
+    "photo": "/images/perfil.jpeg",
     "bio": "Desarrollador de software con enfoque en tecnologías web y blockchain. Estudiante de último año de Ingeniería en Computación en el Tecnológico de Costa Rica. Contribuidor activo en proyectos de código abierto a través de OnlyDust, con experiencia tanto en desarrollo Frontend como Backend. Especializado en ecosistemas blockchain como Starknet y Stellar. Apasionado por la innovación tecnológica y la programación colaborativa."
   },
   "jsonLD": {
@@ -15,7 +15,7 @@
     "jobTitle": "Full Stack Developer & Blockchain Developer",
     "email": "gadyrcalde@gmail.com",
     "telephone": "+506 8599 4094",
-    "image": "images/perfil.jpeg",
+    "image": "/images/perfil.jpeg",
     "url": "https://gadyrcdz.github.io/portaweb01",
     "alumniOf": {
       "@type": "EducationalOrganization",

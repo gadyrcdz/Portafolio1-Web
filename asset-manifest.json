@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.86c14cc3.css",
-    "main.js": "/static/js/main.d5a62296.js",
-    "static/js/977.d8c8cd5a.chunk.js": "/static/js/977.d8c8cd5a.chunk.js",
-    "static/js/455.cb64e07b.chunk.js": "/static/js/455.cb64e07b.chunk.js",
-    "index.html": "/index.html",
-    "main.86c14cc3.css.map": "/static/css/main.86c14cc3.css.map",
-    "main.d5a62296.js.map": "/static/js/main.d5a62296.js.map",
-    "977.d8c8cd5a.chunk.js.map": "/static/js/977.d8c8cd5a.chunk.js.map",
-    "455.cb64e07b.chunk.js.map": "/static/js/455.cb64e07b.chunk.js.map"
+    "main.css": "/portaweb01/static/css/main.86c14cc3.css",
+    "main.js": "/portaweb01/static/js/main.8633c5db.js",
+    "static/js/977.d8c8cd5a.chunk.js": "/portaweb01/static/js/977.d8c8cd5a.chunk.js",
+    "static/js/455.cb64e07b.chunk.js": "/portaweb01/static/js/455.cb64e07b.chunk.js",
+    "index.html": "/portaweb01/index.html",
+    "main.86c14cc3.css.map": "/portaweb01/static/css/main.86c14cc3.css.map",
+    "main.8633c5db.js.map": "/portaweb01/static/js/main.8633c5db.js.map",
+    "977.d8c8cd5a.chunk.js.map": "/portaweb01/static/js/977.d8c8cd5a.chunk.js.map",
+    "455.cb64e07b.chunk.js.map": "/portaweb01/static/js/455.cb64e07b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86c14cc3.css",
-    "static/js/main.d5a62296.js"
+    "static/js/main.8633c5db.js"
   ]
 }

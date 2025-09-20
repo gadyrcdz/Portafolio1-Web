@@ -4,7 +4,7 @@
 
 Portafolio web personal desarrollado como parte del curso **IC8057 - Introducción al Desarrollo de Páginas Web** del Instituto Tecnológico de Costa Rica. Este proyecto integra de manera práctica los conocimientos adquiridos en diseño, desarrollo y despliegue de sitios web modernos.
 
-**🔗 Sitio desplegado:** [https://gadyrcdz.github.io/portaweb01](https://gadyrcdz.github.io/portaweb01)
+**🔗 Sitio desplegado:** [Page](https://gadyrcdz.github.io/Portafolio1-Web/)
 
 ## 👨‍💻 Sobre mí
 

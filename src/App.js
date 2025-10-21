@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Cambio aquí
 import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,7 +16,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router> {/* Ya no necesitas basename con HashRouter */}
       <div className="App">
         <Helmet>
           <title>{personalData.basicInfo.name} - Portafolio</title>

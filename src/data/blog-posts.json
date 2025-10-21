@@ -28,19 +28,6 @@
     },
     {
       "id": 3,
-      "title": "Desarrollando mi Primer dApp: Del Concepto a la Producción",
-      "slug": "mi-primer-dapp-experiencia",
-      "excerpt": "La experiencia completa de crear una aplicación descentralizada desde cero, incluyendo todos los errores y aprendizajes...",
-      "content": "Crear tu primera dApp (aplicación descentralizada) es una experiencia transformadora. Aquí comparto mi journey completo, desde la idea inicial hasta el deployment.\n\n## La Idea Inicial\n\nQuería crear algo útil para la comunidad estudiantil del TEC: un sistema de verificación de certificados usando blockchain. La idea era simple pero poderosa.\n\n## Stack Tecnológico Seleccionado\n\n### Frontend\n- **React**: Para la interfaz de usuario\n- **Web3.js**: Para interactuar con la blockchain\n- **Tailwind CSS**: Para estilos modernos\n\n### Backend & Blockchain\n- **Starknet**: Para los contratos inteligentes\n- **Cairo**: Lenguaje de contratos\n- **IPFS**: Para almacenar metadata\n\n## Desarrollo del Smart Contract\n\n```cairo\n// Ejemplo simplificado del contrato\n@contract_interface\nnamespace ICertificateRegistry {\n    func register_certificate(\n        student_id: felt,\n        certificate_hash: felt,\n        timestamp: felt\n    ) {\n    }\n    \n    func verify_certificate(\n        certificate_hash: felt\n    ) -> (is_valid: felt) {\n    }\n}\n```\n\n## Desafíos Encontrados\n\n### 1. Gestión de Gas\nInicialmente, no optimicé bien los contratos y los costos eran prohibitivos. Aprendí a:\n- Minimizar storage writes\n- Usar eventos eficientemente\n- Batch operations cuando es posible\n\n### 2. User Experience\nLa experiencia con wallets puede ser confusa para nuevos usuarios. Implementé:\n- Onboarding paso a paso\n- Mensajes claros de error\n- Loading states informativos\n\n### 3. Testing\nTesting en blockchain requiere un approach diferente:\n- Unit tests para lógica de negocio\n- Integration tests con testnet\n- Manual testing exhaustivo\n\n## Lecciones Aprendidas\n\n### Técnicas\n1. **Siempre testea en testnet primero**: Los errores en mainnet son costosos\n2. **Documenta todo**: Tu yo del futuro te lo agradecerá\n3. **Security first**: Audita tu código múltiples veces\n\n### De Proceso\n1. **Itera rápido**: MVP primero, features después\n2. **Escucha feedback**: Los usuarios encuentran bugs que tú no viste\n3. **Planea para escalabilidad**: Aunque empieces pequeño\n\n## Herramientas Útiles\n\n- **Hardhat/Protostar**: Para desarrollo local\n- **OpenZeppelin**: Contratos seguros y testeados\n- **Tenderly**: Para debugging\n- **The Graph**: Para indexación de datos\n\n## Próximos Pasos\n\nEl proyecto continúa evolucionando. Planes futuros incluyen:\n- Integración con más universidades\n- Mobile app\n- Soporte multi-chain\n- DAO para gobernanza\n\n## Consejos para tu Primera dApp\n\n1. **Empieza simple**: No intentes construir el próximo DeFi protocol en tu primer proyecto\n2. **Únete a comunidades**: Discord, Telegram, foros - el apoyo es invaluable\n3. **Lee código de otros**: Los repos open source son escuelas gratis\n4. **No te rindas**: Los errores son parte del proceso\n\n## Conclusión\n\nDesarrollar una dApp es desafiante pero increíblemente gratificante. Cada obstáculo superado te hace mejor desarrollador. Si estás pensando en empezar, mi consejo es: hazlo. La mejor forma de aprender blockchain es construyendo.\n\n¿Tienes preguntas sobre el desarrollo de dApps? Contáctame en GitHub o LinkedIn!",
-      "date": "2025-01-28",
-      "readTime": "12 min",
-      "tags": ["dApp", "Desarrollo", "Starknet", "Smart Contracts", "Tutorial"],
-      "published": true,
-      "author": "Gadir Calderón",
-      "coverImage": "/images/blog/primer-dapp.jpg"
-    },
-    {
-      "id": 4,
       "title": "React Hooks Avanzados: Optimizando Aplicaciones Web3",
       "slug": "react-hooks-web3-optimization",
       "excerpt": "Técnicas avanzadas de React Hooks para mejorar el rendimiento en aplicaciones blockchain...",
@@ -53,7 +40,7 @@
       "coverImage": "/images/blog/react-hooks.jpg"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "El Futuro de Blockchain en Costa Rica: Oportunidades y Desafíos",
       "slug": "blockchain-costa-rica-futuro",
       "excerpt": "Análisis del ecosistema blockchain en Costa Rica y las oportunidades para desarrolladores locales...",

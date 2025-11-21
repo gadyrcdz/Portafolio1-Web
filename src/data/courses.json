@@ -4,16 +4,16 @@
       "id": "ic8057",
       "code": "IC8057",
       "name": "Introducción al Desarrollo de Páginas Web",
-      "semester": "I Semestre 2025",
+      "semester": "II Semestre 2025",
       "description": "Curso introductorio al desarrollo web que abarca HTML, CSS, JavaScript y frameworks modernos.",
       "professor": "Nombre del Profesor",
       "works": [
         {
           "id": "lab1",
           "name": "Laboratorio 1: HTML Básico",
-          "type": "laboratorio",
+          "type": "Laboratorio",
           "description": "Creación de una página web básica utilizando HTML semántico",
-          "deliveryDate": "2025-02-15",
+          "deliveryDate": "2025-08-10",
           "technologies": ["HTML", "CSS"],
           "repositoryLink": "https://github.com/gadyrcdz/desarrollo-moderno-Gadyr",
           "deployedLink": "https://github.com/gadyrcdz/desarrollo-moderno-Gadyr",
@@ -23,9 +23,9 @@
         {
           "id": "lab2",
           "name": "Laboratorio 2: CSS y Diseño Responsive",
-          "type": "laboratorio",
+          "type": "Laboratorio",
           "description": "Desarrollo de diseños responsive utilizando CSS avanzado, flexbox y grid",
-          "deliveryDate": "2025-03-01",
+          "deliveryDate": "2025-08-16",
           "technologies": ["HTML", "CSS", "Flexbox", "CSS Grid"],
           "repositoryLink": "https://github.com/gadyrcdz/Laboratorio2",
           "deployedLink": "https://deploy-preview-1--incomparable-pika-f58c60.netlify.app/",
@@ -35,9 +35,9 @@
         {
           "id": "lab3",
           "name": "Laboratorio 3: Selectores CSS y Box Model",
-          "type": "laboratorio",
+          "type": "Laboratorio",
           "description": "Práctica avanzada de selectores CSS, especificidad y manejo del modelo de caja (box model)",
-          "deliveryDate": "2025-03-08",
+          "deliveryDate": "2025-08-25",
           "technologies": ["HTML", "CSS", "Box Model", "Selectores CSS"],
           "repositoryLink": "https://github.com/gadyrcdz/Laboratorio2/tree/lab3-selectores-boxmodel",
           "deployedLink": "https://deploy-preview-1--incomparable-pika-f58c60.netlify.app/",
@@ -47,9 +47,9 @@
         {
           "id": "lab5",
           "name": "Laboratorio 5: Diseño Responsive Avanzado",
-          "type": "laboratorio",
+          "type": "Laboratorio",
           "description": "Implementación de técnicas avanzadas de diseño responsive con media queries y layouts adaptativos",
-          "deliveryDate": "2025-03-22",
+          "deliveryDate": "2025-09-07",
           "technologies": ["HTML", "CSS", "Responsive Design", "Media Queries"],
           "repositoryLink": "https://github.com/gadyrcdz/Laboratorio2/tree/lab5-responsive",
           "deployedLink": "https://deploy-preview-1--incomparable-pika-f58c60.netlify.app/",
@@ -57,9 +57,53 @@
           "status": "completed"
         },
         {
+          "id": "lab8",
+          "name": "Laboratorio 8: API REST con Node.js y Express",
+          "type": "Laboratorio",
+          "description": "Desarrollar una API REST con Node.js y Express que implemente buenas prácticas de seguridad, manejo de errores, validación de datos y estandarización de respuestas",
+          "deliveryDate": "2025-10-03",
+          "technologies": ["Node.js", "Express", "Media Queries"],
+          "repositoryLink": "https://github.com/gadyrcdz/lab8-api-rest",
+          "grade": 82.5,
+          "status": "completed"
+        },
+        {
+          "id": "lab9",
+          "name": "Laboratorio 9: Servidor GraphQL en Node.js",
+          "type": "Laboratorio",
+          "description": "Diseñar e implementar un servidor GraphQL en Node.js que reemplace los endpoints REST del Lab 8 por queries y mutations equivalentes",
+          "deliveryDate": "2025-10-12",
+          "technologies": ["Node.js", "GraphQL", "Mutations", "Queries"],
+          "repositoryLink": "https://github.com/gadyrcdz/Lab09-GraphQL",
+          "grade": 100,
+          "status": "completed"
+        },
+        {
+          "id": "lab10",
+          "name": "Laboratorio 10: componente en React que consuma un API",
+          "type": "Laboratorio",
+          "description": "Desarrollar un componente en React que consuma un API protegido mediante API Key, aplicando los hooks useState y useEffect para manejar estados, efectos y peticiones asíncronas.",
+          "deliveryDate": "2025-10-24",
+          "technologies": ["useState", "useEffect", "API Key", "Skeletons"],
+          "repositoryLink": "https://github.com/gadyrcdz/Lab10-consumirAPI",
+          "grade": null,
+          "status": "completed"
+        },
+        {
+          "id": "lab13",
+          "name": "Laboratorio 13: API de OpenAI",
+          "type": "Laboratorio",
+          "description": "Diseñar e implementar un asistente conversacional inteligente que sea capaz de responder preguntas sobre el proyecto del banco simulado, basándose en su modelo de datos y documentación interna, complementando las respuestas con información generada por la API de OpenAI para mantener conversaciones naturales y sugerir posibles continuaciones de diálogo.",
+          "deliveryDate": "2025-11-12",
+          "technologies": ["Integración con OpenAI"],
+          "repositoryLink": "https://github.com/MITTuu/Laboratorio-13_Chatbot",
+          "grade": null,
+          "status": "completed"
+        },
+        {
           "id": "portafolio",
           "name": "Portafolio Personal",
-          "type": "proyecto",
+          "type": "Proyecto",
           "description": "Desarrollo de un portafolio web personal con React, implementando todas las secciones requeridas del curso",
           "deliveryDate": "2025-03-15",
           "technologies": ["React", "CSS", "JavaScript", "GitHub Pages"],
@@ -83,7 +127,7 @@
         {
           "id": "proyecto1",
           "name": "Proyecto 1: Programación en Ensamblador Básico",
-          "type": "proyecto",
+          "type": "Proyecto",
           "description": "Implementación de programas básicos en lenguaje ensamblador utilizando aritmética y flujo de control",
           "deliveryDate": "2023-04-15",
           "technologies": ["Assembly", "Lenguaje Ensamblador", "Arquitectura x86"],
@@ -95,7 +139,7 @@
         {
           "id": "proyecto2", 
           "name": "Proyecto 2: Rutinas y Paso de Parámetros",
-          "type": "proyecto",
+          "type": "Proyecto",
           "description": "Desarrollo de rutinas complejas con paso de parámetros y construcción de macros en ensamblador",
           "deliveryDate": "2023-4-20",
           "technologies": ["Assembly", "Macros", "Procedimientos"],
@@ -107,7 +151,7 @@
         {
           "id": "proyecto3",
           "name": "Proyecto 3: Sistemas de Entrada/Salida",
-          "type": "proyecto", 
+          "type": "Proyecto", 
           "description": "Implementación de sistemas de E/S con DMA y manejo de dispositivos periféricos",
           "deliveryDate": "2023-5-15",
           "technologies": ["Assembly", "DMA", "I/O Systems"],
@@ -119,7 +163,7 @@
         {
           "id": "proyecto4",
           "name": "Proyecto 4: Multiprocesadores y Sistemas Empotrados",
-          "type": "proyecto",
+          "type": "Proyecto",
           "description": "Análisis y programación para sistemas multiprocesador y arquitecturas empotradas",
           "deliveryDate": "2024-12-01",
           "technologies": ["Assembly", "Multicore", "Embedded Systems"],
@@ -131,7 +175,7 @@
         {
           "id": "investigacion1",
           "name": "Investigación 1: Pipeline y Modelos de Alto Rendimiento",
-          "type": "investigación",
+          "type": "Investigación",
           "description": "Investigación sobre técnicas de pipeline, paralelismo y optimización de rendimiento en procesadores modernos",
           "deliveryDate": "2023-5-30",
           "technologies": ["Investigación", "Pipeline", "Performance Analysis"],
@@ -143,7 +187,7 @@
         {
           "id": "investigacion2",
           "name": "Investigación 2: RISC vs CISC",
-          "type": "investigación", 
+          "type": "Investigación", 
           "description": "Análisis comparativo entre arquitecturas RISC y CISC, ventajas y aplicaciones actuales",
           "deliveryDate": "2023-6-30",
           "technologies": ["Investigación", "RISC", "CISC", "Computer Architecture"],
@@ -155,7 +199,7 @@
         {
           "id": "examen1",
           "name": "Examen Parcial 1: Fundamentos y Aritmética",
-          "type": "examen",
+          "type": "Examen",
           "description": "Evaluación sobre conceptos básicos de arquitectura, ALU, sistemas numéricos y operaciones aritméticas",
           "deliveryDate": "2023-05-25",
           "technologies": ["Teoría", "ALU", "Arithmetic"],
@@ -167,7 +211,7 @@
         {
           "id": "examen2", 
           "name": "Examen Parcial 2: Ensamblador y Sistemas Avanzados",
-          "type": "examen",
+          "type": "Examen",
           "description": "Evaluación sobre programación en ensamblador, pipeline, multiprocesadores y sistemas empotrados",
           "deliveryDate": "2023-03-05",
           "technologies": ["Assembly", "Pipeline", "Multiprocessor"],
@@ -180,12 +224,12 @@
     }
   ],
   "workTypes": [
-    "laboratorio",
-    "tarea", 
-    "proyecto",
-    "investigación",
-    "examen",
-    "otro"
+    "Laboratorio",
+    "Tarea", 
+    "Proyecto",
+    "Investigación",
+    "Examen",
+    "Otro"
   ],
   "technologies": [
     "HTML",

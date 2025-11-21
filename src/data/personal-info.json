@@ -1,6 +1,6 @@
 {
   "basicInfo": {
-    "name": "Gadir Calderón Díaz",
+    "name": "Gadyr Calderón Díaz",
     "title": "Desarrollador Full Stack | Blockchain Developer | Estudiante de Ingeniería en Computación",
     "email": "gadyrcalde@gmail.com",
     "phone": "+506 8599 4094",
@@ -11,7 +11,7 @@
   "jsonLD": {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Gadir Calderón Díaz",
+    "name": "Gadyr Calderón Díaz",
     "jobTitle": "Full Stack Developer & Blockchain Developer",
     "email": "gadyrcalde@gmail.com",
     "telephone": "+506 8599 4094",

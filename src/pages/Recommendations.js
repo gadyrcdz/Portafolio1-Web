@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, User, Calendar, Star } from 'lucide-react';
+import { MessageCircle, User, Calendar, Star, Loader, RefreshCw, CheckCircle, X, AlertCircle } from 'lucide-react';
 import './Recommendations.css';
 
 const Recommendations = () => {
@@ -12,76 +12,157 @@ const Recommendations = () => {
     rating: 5
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [toast, setToast] = useState(null);
+
+  // Configuración: usa variables de entorno o valores por defecto
+  const JSONBIN_API_KEY = process.env.REACT_APP_JSONBIN_API_KEY || '$2a$10$0A84o7quX1c5KEyvficp5uCod9xF78sflx17g6tnL/1wB/ZDxSQY.';
+  const JSONBIN_BIN_ID = process.env.REACT_APP_JSONBIN_BIN_ID || '6920d246ae596e708f68352a';
+
+  const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`;
+
+  console.log(JSONBIN_URL);
+  // Función para mostrar toast
+  const showToast = (message, type = 'success') => {
+    setToast({ message, type });
+    setTimeout(() => setToast(null), 4000); // Desaparece después de 4 segundos
+  };
+
+  // Verificar configuración
+  useEffect(() => {
+    if (JSONBIN_API_KEY === 'TU_API_KEY_AQUI' || JSONBIN_BIN_ID === 'TU_BIN_ID_AQUI') {
+      console.error('JSONBin.io no está configurado correctamente.');
+      console.error('Por favor, configura REACT_APP_JSONBIN_API_KEY y REACT_APP_JSONBIN_BIN_ID');
+      setError('El sistema de recomendaciones no está configurado. Contacta al administrador.');
+      setIsLoading(false);
+    }
+  }, [JSONBIN_API_KEY, JSONBIN_BIN_ID]);
 
   useEffect(() => {
-    const savedRecommendations = localStorage.getItem('portfolio-recommendations');
-    if (savedRecommendations) {
-      setRecommendations(JSON.parse(savedRecommendations));
-    } else {
-      const exampleRecommendations = [
-        {
-          id: 1,
-          name: "María González",
-          email: "maria.gonzalez@estudiantec.cr",
-          relationship: "Compañera de clase",
-          message: "Excelente compañero de equipo. Siempre dispuesto a ayudar y con gran capacidad para resolver problemas técnicos.",
-          rating: 5,
-          date: "2024-02-15"
-        },
-        {
-          id: 2,
-          name: "Carlos Rodríguez",
-          email: "carlos.rodriguez@estudiantec.cr", 
-          relationship: "Compañero de laboratorio",
-          message: "Muy responsable y organizado. Sus aportes en los proyectos grupales siempre son de gran calidad.",
-          rating: 5,
-          date: "2024-02-10"
-        }
-      ];
-      setRecommendations(exampleRecommendations);
-      localStorage.setItem('portfolio-recommendations', JSON.stringify(exampleRecommendations));
+    if (JSONBIN_API_KEY !== 'TU_API_KEY_AQUI' && JSONBIN_BIN_ID !== 'TU_BIN_ID_AQUI') {
+      fetchRecommendations();
     }
   }, []);
+
+  // Función para obtener recomendaciones desde JSONBin
+  const fetchRecommendations = async () => {
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      const response = await fetch(JSONBIN_URL + '/latest', {
+        method: 'GET',
+        headers: {
+          'X-Master-Key': JSONBIN_API_KEY,
+          'X-Bin-Meta': 'false'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      
+      // Ordenar por fecha más reciente primero
+      const sortedRecommendations = (data || []).sort((a, b) => 
+        new Date(b.date) - new Date(a.date)
+      );
+      
+      setRecommendations(sortedRecommendations);
+    } catch (err) {
+      console.error('Error fetching recommendations:', err);
+      setError('No se pudieron cargar las recomendaciones. Intenta recargar la página.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Función para guardar recomendaciones en JSONBin
+  const saveRecommendations = async (updatedRecommendations) => {
+    try {
+      const response = await fetch(JSONBIN_URL, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': JSONBIN_API_KEY
+        },
+        body: JSON.stringify(updatedRecommendations)
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || 'Error al guardar la recomendación');
+      }
+
+      return true;
+    } catch (err) {
+      console.error('Error saving recommendations:', err);
+      throw err;
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewRecommendation(prev => ({
       ...prev,
-      [name]: value
+      [name]: name === 'rating' ? parseInt(value) : value
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Validación básica
-    if (!newRecommendation.name || !newRecommendation.message) {
-      alert('Por favor completa al menos tu nombre y mensaje.');
+    // Validación
+    if (!newRecommendation.name.trim()) {
+      showToast('Por favor ingresa tu nombre', 'error');
       setIsSubmitting(false);
       return;
     }
 
-    const recommendation = {
-      id: Date.now(),
-      ...newRecommendation,
-      date: new Date().toISOString().split('T')[0]
-    };
+    if (!newRecommendation.message.trim() || newRecommendation.message.trim().length < 10) {
+      showToast('El mensaje debe tener al menos 10 caracteres', 'error');
+      setIsSubmitting(false);
+      return;
+    }
 
-    const updatedRecommendations = [...recommendations, recommendation];
-    setRecommendations(updatedRecommendations);
-    localStorage.setItem('portfolio-recommendations', JSON.stringify(updatedRecommendations));
+    try {
+      const recommendation = {
+        id: Date.now(),
+        name: newRecommendation.name.trim(),
+        email: newRecommendation.email.trim(),
+        relationship: newRecommendation.relationship || 'No especificado',
+        message: newRecommendation.message.trim(),
+        rating: newRecommendation.rating,
+        date: new Date().toISOString().split('T')[0]
+      };
 
-    setNewRecommendation({
-      name: '',
-      email: '',
-      relationship: '',
-      message: '',
-      rating: 5
-    });
+      const updatedRecommendations = [recommendation, ...recommendations];
+      
+      await saveRecommendations(updatedRecommendations);
+      
+      setRecommendations(updatedRecommendations);
 
-    setIsSubmitting(false);
-    alert('¡Gracias por tu recomendación!');
+      setNewRecommendation({
+        name: '',
+        email: '',
+        relationship: '',
+        message: '',
+        rating: 5
+      });
+
+      showToast('¡Gracias por tu recomendación! Se ha guardado exitosamente', 'success');
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      console.error('Submit error:', err);
+      showToast('Error al enviar la recomendación. Intenta de nuevo', 'error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderStars = (rating) => {
@@ -95,15 +176,40 @@ const Recommendations = () => {
   };
 
   const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('es-ES', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    try {
+      return new Date(dateString).toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    } catch (err) {
+      return dateString;
+    }
   };
 
   return (
     <div className="recommendations">
+      {/* Toast Notification */}
+      {toast && (
+        <div className={`toast toast-${toast.type}`}>
+          <div className="toast-icon">
+            {toast.type === 'success' ? (
+              <CheckCircle size={20} />
+            ) : (
+              <AlertCircle size={20} />
+            )}
+          </div>
+          <p className="toast-message">{toast.message}</p>
+          <button 
+            className="toast-close" 
+            onClick={() => setToast(null)}
+            aria-label="Cerrar notificación"
+          >
+            <X size={16} />
+          </button>
+        </div>
+      )}
+
       <div className="container">
         <header className="page-header">
           <h1>Recomendaciones de Compañeros</h1>
@@ -113,16 +219,35 @@ const Recommendations = () => {
           </p>
         </header>
 
+        {error && (
+          <div className="error-message">
+            <p>{error}</p>
+            <button onClick={fetchRecommendations} className="btn-retry">
+              <RefreshCw size={16} />
+              Reintentar
+            </button>
+          </div>
+        )}
+
         <div className="recommendations-content">
           <div className="recommendations-list">
-            <h2>
-              <MessageCircle size={24} />
-              Recomendaciones ({recommendations.length})
-            </h2>
+            <div className="section-header">
+              <h2>
+                <MessageCircle size={24} />
+                Recomendaciones ({recommendations.length})
+              </h2>
+            </div>
 
-            {recommendations.length === 0 ? (
+            {isLoading ? (
+              <div className="loading-state">
+                <Loader className="spinner" size={32} />
+                <p>Cargando recomendaciones...</p>
+              </div>
+            ) : recommendations.length === 0 ? (
               <div className="no-recommendations">
-                <p>Aún no hay recomendaciones. ¡Sé el primero en dejar una!</p>
+                <MessageCircle size={48} />
+                <p>Aún no hay recomendaciones.</p>
+                <p>¡Sé el primero en dejar una!</p>
               </div>
             ) : (
               <div className="recommendations-grid">
@@ -133,7 +258,9 @@ const Recommendations = () => {
                         <User size={20} className="author-avatar" />
                         <div>
                           <h4>{recommendation.name}</h4>
-                          <p className="relationship">{recommendation.relationship}</p>
+                          {recommendation.relationship && (
+                            <p className="relationship">{recommendation.relationship}</p>
+                          )}
                         </div>
                       </div>
                       <div className="recommendation-meta">
@@ -173,6 +300,7 @@ const Recommendations = () => {
                   onChange={handleInputChange}
                   required
                   placeholder="Tu nombre completo"
+                  maxLength="100"
                 />
               </div>
 
@@ -184,7 +312,8 @@ const Recommendations = () => {
                   name="email"
                   value={newRecommendation.email}
                   onChange={handleInputChange}
-                  placeholder="tu.email@estudiantec.cr"
+                  placeholder="tu.email@estudiantec.cr (opcional)"
+                  maxLength="100"
                 />
               </div>
 
@@ -215,6 +344,7 @@ const Recommendations = () => {
                       type="button"
                       className={`star-button ${star <= newRecommendation.rating ? 'active' : ''}`}
                       onClick={() => handleInputChange({ target: { name: 'rating', value: star } })}
+                      aria-label={`${star} estrellas`}
                     >
                       <Star size={20} />
                     </button>
@@ -233,15 +363,27 @@ const Recommendations = () => {
                   required
                   rows="4"
                   placeholder="Comparte tu experiencia trabajando conmigo. ¿Qué destacarías? ¿Cómo fue la colaboración?"
+                  minLength="10"
+                  maxLength="500"
                 />
+                <small className="char-count">
+                  {newRecommendation.message.length}/500 caracteres
+                </small>
               </div>
 
               <button 
                 type="submit" 
                 className="btn btn-primary"
-                disabled={isSubmitting}
+                disabled={isSubmitting || JSONBIN_API_KEY === 'TU_API_KEY_AQUI'}
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Recomendación'}
+                {isSubmitting ? (
+                  <>
+                    <Loader className="spinner" size={16} />
+                    Enviando...
+                  </>
+                ) : (
+                  'Enviar Recomendación'
+                )}
               </button>
             </form>
           </div>

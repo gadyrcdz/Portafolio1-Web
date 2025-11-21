@@ -11,10 +11,10 @@ const AcademicWorks = () => {
     workType: '',
     technology: '',
     semester: '',
+    date: '', 
     status: ''
   });
   const [showFilters, setShowFilters] = useState(false);
-
 
   useEffect(() => {
     setCourses(coursesData.courses);
@@ -36,6 +36,7 @@ const AcademicWorks = () => {
   }, [filters, courses]);
 
   const filterWorks = () => {
+    // ✅ CORREGIDO: Mapeo correcto de los datos
     let filtered = courses.flatMap(course => 
       course.works.map(work => ({
         ...work,
@@ -50,16 +51,26 @@ const AcademicWorks = () => {
     if (filters.workType) {
       filtered = filtered.filter(work => work.type === filters.workType);
     }
+    
     if (filters.technology) {
       filtered = filtered.filter(work => 
         work.technologies.includes(filters.technology)
       );
     }
+    
     if (filters.semester) {
       filtered = filtered.filter(work => 
         work.courseInfo.semester === filters.semester
       );
     }
+    
+    // ✅ CORREGIDO: Comparar con work.deliveryDate directamente
+    if (filters.date) {
+      filtered = filtered.filter(work => 
+        work.deliveryDate === filters.date
+      );
+    }
+    
     if (filters.status) {
       filtered = filtered.filter(work => work.status === filters.status);
     }
@@ -79,6 +90,7 @@ const AcademicWorks = () => {
       workType: '',
       technology: '',
       semester: '',
+      date: '',
       status: ''
     });
   };
@@ -130,6 +142,7 @@ const AcademicWorks = () => {
           {showFilters && (
             <div className="filters-panel">
               <div className="filters-grid">
+                {/* Filtro por Tipo de Trabajo */}
                 <select 
                   value={filters.workType}
                   onChange={(e) => handleFilterChange('workType', e.target.value)}
@@ -140,6 +153,7 @@ const AcademicWorks = () => {
                   ))}
                 </select>
 
+                {/* Filtro por Tecnología */}
                 <select 
                   value={filters.technology}
                   onChange={(e) => handleFilterChange('technology', e.target.value)}
@@ -150,6 +164,7 @@ const AcademicWorks = () => {
                   ))}
                 </select>
 
+                {/* Filtro por Semestre */}
                 <select 
                   value={filters.semester}
                   onChange={(e) => handleFilterChange('semester', e.target.value)}
@@ -160,6 +175,20 @@ const AcademicWorks = () => {
                   ))}
                 </select>
 
+                {/* ✅ Filtro por Fecha */}
+                <select 
+                  value={filters.date}
+                  onChange={(e) => handleFilterChange('date', e.target.value)}
+                >
+                  <option value="">Todas las fechas</option>
+                  {[...new Set(courses.flatMap(course => 
+                    course.works.map(work => work.deliveryDate)
+                  ))].sort().map(date => (
+                    <option key={date} value={date}>{formatDate(date)}</option>
+                  ))}
+                </select>
+
+                {/* Filtro por Estado */}
                 <select 
                   value={filters.status}
                   onChange={(e) => handleFilterChange('status', e.target.value)}
@@ -199,7 +228,7 @@ const AcademicWorks = () => {
                   <Calendar size={16} />
                   <span>{formatDate(work.deliveryDate)}</span>
                 </div>
-                {work.grade && (
+                {work.grade !== null && (
                   <div className="detail-item">
                     <span className="grade">Nota: {getGradeDisplay(work.grade)}</span>
                   </div>
